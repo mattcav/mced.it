@@ -1,0 +1,6 @@
+{
+  "name": "assemble-foundation",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}
