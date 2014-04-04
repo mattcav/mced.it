@@ -60,16 +60,17 @@ module.exports = function(grunt) {
       },
       your_target: {
         files: {
-          '<%= config.dist %>/assets/css/cmq': ['<%= config.dist %>/assets/css/*.css']
+          '<%= config.dist %>/assets/css/cmq': ['<%= config.dist %>/assets/css/app.css']
         }
       }
     },
 
+
     cssmin: {
       minify: {
         expand: true,
-        cwd: '<%= config.dist %>/assets/css/cmq',
-        src: ['<%= config.dist %>/assets/*.css', '<%= config.dist %>/assets/!*.min.css'],
+        cwd: '<%= config.dist %>/assets/css/cmq/',
+        src: ['*.css', '!*.min.css'],
         dest: '<%= config.dist %>/assets/css/',
         ext: '.min.css'
       }
