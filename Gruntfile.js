@@ -31,8 +31,8 @@ module.exports = function(grunt) {
         options: {
           browsers: ['last 2 version', 'ie 8', 'ie 7']
         },
-        src: '<%= config.dist %>/assets/css/style.css',
-        dest: '<%= config.dist %>/assets/css/style.css'
+        src: '<%= config.dist %>/assets/css/app.css',
+        dest: '<%= config.dist %>/assets/css/app.css'
       },
     },
     
