@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 
     sass_directory_import: {
       files: {
-        src: ['<%= config.src %>/scss/modules/_all.scss'],
+        src: ['<%= config.src %>/scss/modules/_all.scss']
+      }
     },
 
     sass: {
