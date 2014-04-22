@@ -6,10 +6,14 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-
     config: {
       src: 'src',
       dist: 'dist'
+    },
+
+    sass_directory_import: {
+      files: {
+        src: ['<%= config.src %>/scss/modules/_all.scss'],
     },
 
     sass: {

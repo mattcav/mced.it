@@ -17,6 +17,7 @@
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-cssmin": "~0.9.0",
     "css-parse": "~1.5.3",
-    "grunt-combine-media-queries": "~1.0.15"
+    "grunt-combine-media-queries": "~1.0.15",
+    "grunt-sass-directory-import": "~0.1.1"
   }
 }
