@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
     sass_directory_import: {
       files: {
-        src: ['<%= config.src %>/scss/modules/_all.scss']
+        src: ['<%= config.src %>/scss/{modules,layout}/_all.scss']
       }
     },
 
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
 
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
+        files: ['<%= config.src %>/{content,data,templates}/{layouts,pages,partials}/{,*/}*.{md,hbs,yml}'],
         tasks: ['assemble']
       },
       sass: {
@@ -157,9 +157,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-sass-directory-import');
+
 
   grunt.registerTask('server', [
     'clean',
+    'sass_directory_import',
     'newer:assemble',
     'connect:livereload',
     'watch'
@@ -167,6 +170,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean',
+    'sass_directory_import',
     'assemble',
     'uglify',
     'cmq',
