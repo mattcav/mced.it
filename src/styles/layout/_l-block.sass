@@ -1,13 +1,13 @@
 // Layouts
 //
 // Prefixed with `l-` and usually consist of objects that contain only layout information.
-// 
+//
 // Styleguide 3
 
 // Block
 //
 // The common vertically stacked block unit. It contains information about the horizontal width, vertical padding and background color of the unit.
-// 
+//
 // Markup: <div style="overflow: auto;"><div style="border:2px dashed #faf8d1; width: 1600px;">
 //   <!-- Used markup: -->
 //   <div class="l-block {$modifiers}">
@@ -21,19 +21,19 @@
 // .l-block--short-bottom - Smaller vertical padding on bottom only.
 // .l-block--black        - Black background color, white color text.
 // .l-block--grey-dark    - Grey dark background color, white color text.
-// 
+//
 // Styleguide 3.1
 .l-block
   @extend .clearfix
-  padding-left: em(25)
-  padding-right: em(25)
+  padding-left: $section-padding
+  padding-right: $section-padding
   +respond-min($bp__phone-landscape)
-    padding-left: em(40)
-    padding-right: em(40)
+    padding-left: $section-padding * 1.25
+    padding-right: $section-padding * 1.25
   +respond-min($bp__widescreen)
-    padding-left: em(100, 18)
-    padding-right: em(100, 18)
-  
+    padding-left: $section-padding * 1.5
+    padding-right: $section-padding * 1.5
+
 .l-block--full-width
   +respond-min($bp__widescreen)
     padding-left: em(100)
@@ -49,30 +49,30 @@
 
 .l-block__container
   margin: 0 auto
-  margin-top: em(70)
-  margin-bottom: em(70)
+  margin-top: rem(70)
+  margin-bottom: rem(70)
   @extend .clearfix
   +respond-min($bp__phone-landscape)
-    margin-top: em(90)
-    margin-bottom: em(90)
+    margin-top: rem(90)
+    margin-bottom: rem(90)
     max-width: 80%
   +respond-min($bp__widescreen)
-    margin-bottom: em(100, 18)
-    margin-top: em(100, 18)
-    max-width: em(1150, 18)
+    margin-bottom: rem(100, 18)
+    margin-top: rem(100, 18)
+    max-width: rem(1150, 18)
   .l-block--short &
-    margin-top: em(20)
-    margin-bottom: em(20)
+    margin-top: rem(20)
+    margin-bottom: rem(20)
     +respond-min($bp__phone-landscape)
-      margin-top: em(40)
-      margin-bottom: em(40)
+      margin-top: rem(40)
+      margin-bottom: rem(40)
   .l-block--short-bottom &
-    margin-bottom: em(20)
+    margin-bottom: rem(20)
     +respond-min($bp__phone-landscape)
-      margin-bottom: em(40)
+      margin-bottom: rem(40)
   .l-block--wide &
     +respond-min($bp__phone-landscape)
-      max-width: em(1024)
+      max-width: rem(1024)
     +respond-min($bp__widescreen)
       max-width: em(1280, 18)
   .l-block--full-width &
