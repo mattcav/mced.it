@@ -1,0 +1,18 @@
+<header class="m-masthead">
+  <h1 class="m-masthead__title">
+    <a href="./" class="m-masthead__home-link">
+      <img src="{{assets}}/images/logo@2x.jpg" alt="Usertest/lab" class="o-logo">
+    </a>
+  </h1>
+
+  <nav class="m-navigation">
+    <ul class="m-navigation__list">
+      {{#each navigation.main-nav}}
+        <li class="m-navigation__item">
+          <a href="{{link}}" class="m-navigation__link">{{label}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </nav>
+
+</header>

@@ -1,0 +1,100 @@
+body
+  font: normal #{$fonts__base}/#{$fonts__line-height} $fonts
+  color: $color__text
+  -webkit-font-smoothing: antialiased
+  +respond-min($bp__widescreen)
+    font-size: 1.125em
+
+ol,
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+blockquote, ol, dl, fieldset
+  > :last-child
+    margin: 0
+
+abbr[title]
+  border-bottom: none
+
+.as-h1
+  font-size: em($ratio__medium)
+  font-weight: $fonts__black-weight
+  line-height: 1.25
+  -webkit-font-smoothing: antialiased
+  +respond-min($bp__tablet-landscape)
+    font-size: em($ratio__big)
+
+.as-h2
+  font-size: em($ratio__medium)
+  font-weight: $fonts__bold-weight
+  line-height: 1.25
+  +respond-min($bp__widescreen)
+    font-size: em(30)
+  +respond-max($bp__phone-landscape)
+    text-align: center
+
+.as-h3
+  font-size: em(20)
+  font-weight: $fonts__bold-weight
+  line-height: 1.25
+  +respond-min($bp__widescreen)
+    font-size: em($ratio__medium)
+
+.as-h4
+  font-size: em(14)
+  font-weight: $fonts__bold-weight
+  line-height: 1.25
+
+.smallcaps
+  font-size: em(14)
+  font-weight: $fonts__bold-weight
+  text-transform: uppercase
+  letter-spacing: .125em
+  padding-left: .125em
+
+.smallcaps--small
+  +respond-max($bp__iphone-4s)
+    font-size: em($ratio__small)
+    font-weight: normal
+
+.title-text
+  font-weight: normal
+
+.subtitle-text
+  font-weight: normal
+
+.big-text
+  +respond-min-max($bp__phone-landscape, $bp__widescreen)
+    font-size: em(20)
+  +respond-min($bp__widescreen)
+    font-size: em($ratio__medium)
+
+.uppercase
+  font-size: em(18)
+  text-transform: uppercase
+  letter-spacing: .0625em
+  font-weight: $fonts__black-weight
+  +respond-min($bp__widescreen)
+    font-size: em(24)
+
+.weight--black
+  font-weight: $fonts__black-weight
+
+.weight--normal
+  font-weight: normal
+
+.underline
+  border-bottom: 1px solid
+
+.color--light
+  color: $color__grey5
+
+.color--dark
+  color: $color__grey3
+
+.color--red
+  color: $color__primary
+  .l-section--color &
+    color: $color__grey1

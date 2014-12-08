@@ -11,25 +11,32 @@ module.exports = function(grunt) {
       dist: 'dist'
     },
 
-    sass_directory_import: {
+   sass_directory_import: {
       files: {
-        src: ['<%= config.src %>/scss/{modules,layout}/_all.scss']
+        src: ['<%= config.src %>/styles/{base,modules,layout,objects}/_all.sass']
       }
     },
-
     sass: {
-      options: {
-        includePaths: ['bower_components/foundation/scss']
-      },
       dist: {
         options: {
           outputStyle: 'nested'
         },
         files: {
-          '<%= config.dist %>/assets/css/app.css': '<%= config.src %>/scss/app.scss'
+          '<%= config.dist %>/assets/css/app.css': '<%= config.src %>/styles/app.sass'
         }
       }
     },
+
+    cssmin: {
+      minify: {
+        expand: true,
+        cwd: '<%= config.dist %>/assets/css/',
+        src: ['*.css', '!*.min.css'],
+        dest: '<%= config.dist %>/assets/css/',
+        ext: '.min.css'
+      }
+    },
+
 
     autoprefixer: {
       single_file: {
@@ -40,7 +47,7 @@ module.exports = function(grunt) {
         dest: '<%= config.dist %>/assets/css/app.css'
       },
     },
-    
+
     concat: {
       app: {
         src: [
@@ -59,36 +66,14 @@ module.exports = function(grunt) {
       }
     },
 
-    cmq: {
-      options: {
-        log: false
-      },
-      your_target: {
-        files: {
-          '<%= config.dist %>/assets/css/cmq': ['<%= config.dist %>/assets/css/app.css']
-        }
-      }
-    },
-
-
-    cssmin: {
-      minify: {
-        expand: true,
-        cwd: '<%= config.dist %>/assets/css/cmq/',
-        src: ['*.css', '!*.min.css'],
-        dest: '<%= config.dist %>/assets/css/',
-        ext: '.min.css'
-      }
-    },
-
 
     watch: {
       assemble: {
         files: ['<%= config.src %>/{content,data,templates}/{layouts,pages,partials}/{,*/}*.{md,hbs,yml}'],
-        tasks: ['assemble']
+        tasks: ['newer:assemble']
       },
       sass: {
-        files: '<%= config.src %>/scss/{,*/}*.scss',
+        files: '<%= config.src %>/styles/{,*/}*.sass',
         tasks: ['sass', 'autoprefixer']
       },
       concat: {
@@ -110,8 +95,8 @@ module.exports = function(grunt) {
 
     connect: {
       options: {
-        port: 9000,
-        livereload: 35729,
+        port: 9001,
+        livereload: 35728,
         // change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost'
       },
@@ -155,25 +140,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-sass-directory-import');
 
 
-  grunt.registerTask('server', [
+  grunt.registerTask('serve', [
     'clean',
+    'assemble',
     'sass_directory_import',
-    'newer:assemble',
     'connect:livereload',
     'watch'
   ]);
 
   grunt.registerTask('build', [
     'clean',
-    'sass_directory_import',
     'assemble',
+    'sass_directory_import',
     'uglify',
-    'cmq',
     'cssmin'
   ]);
 

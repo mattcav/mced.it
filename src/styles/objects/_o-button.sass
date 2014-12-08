@@ -1,0 +1,77 @@
+// Objects
+//
+// Prefixed with `o-` and usually consist of the smaller build units.
+//
+// Styleguide 1
+
+// Basic Buttons
+//
+// Markup: <a href="#" class="o-button {$modifiers} " > A link button </a>
+// <button class="o-button {$modifiers}">A button tag</button>
+// <input type="button" class="o-button {$modifiers}" value="An input button">
+//
+// .o-button--primary   - Primary style.
+// .o-button--secondary - Secondary buttons.
+// .o-button--light     - Light variation.
+// .o-button--small     - Smaller height.
+// .o-button--compact   - Compact width.
+//
+// Styleguide 1.1
+
+.o-button
+  padding-left: em($ratio__base)
+  padding-right: em($ratio__base)
+  display: block
+  box-sizing: border-box
+  text-align: center
+  min-width: 8.75em
+  line-height: em($object-height)
+  font-weight: $fonts__bold-weight
+  border-radius: $border-radius
+  &:before // .o-button.o-icon margin
+    margin-right: .5em
+  transition: background-color $transition__duration, color $transition__duration
+  +link
+    background-color: $color__grey2
+    color: white
+  +on-interaction
+    background-color: $color__black
+  +respond-max($bp__phone-landscape)
+    margin-top: em($ratio__small)
+  +respond-min($bp__phone-landscape)
+    display: inline-block
+
+.o-button--primary
+  +link
+    background-color: $color__primary
+  +on-interaction
+    background-color: $color__primary--light
+
+.o-button--secondary
+  +link
+    background-color: $color__green
+  +on-interaction
+    background-color: darken($color__green, 5%)
+
+
+.o-button--light
+  +link
+    background-color: $color__grey3
+  +on-interaction
+    background-color: $color__grey5
+
+.o-button--state
+  +link
+    background-color: $color__grey3
+  +on-interaction
+    background-color: $color__primary
+
+.o-button--small
+  font-size: em(14)
+  line-height: em($object-height__small)
+
+.o-button--large
+  line-height: em($object-height__large)
+
+.o-button--compact
+  min-width: em($object-height)

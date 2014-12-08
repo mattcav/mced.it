@@ -1,0 +1,55 @@
+@charset "UTF-8"
+
+* 
+  background: transparent !important
+  color: #000 !important
+  box-shadow: none !important
+  text-shadow: none !important
+
+a
+  &,
+  &:visited 
+    text-decoration: underline
+
+a[href]
+  &:after
+    content: " (" attr(href) ")"
+
+abbr[title]
+  &:after
+    content: " (" attr(title) ")"
+
+a[href^="#"]:after
+  content: ""
+
+pre,
+blockquote
+  border: 1px solid #999
+  page-break-inside: avoid
+
+thead
+  display: table-header-group
+
+tr,
+img,
+pre,
+blockquote
+  page-break-inside: avoid
+
+img
+  max-width: 100% !important
+
+p,
+h2,
+h3
+  orphans: 3
+  widows: 3
+
+h2,
+h3
+  page-break-after: avoid
+
+[role=navigation],
+[role=search],
+[role=complementary]
+  display: none 

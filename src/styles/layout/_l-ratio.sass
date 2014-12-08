@@ -1,0 +1,59 @@
+// Ratio
+//
+// Keeps the video or overlay popup aspect ratio steady.
+// 
+// Markup:
+//   <div class="l-ratio {$modifiers}">
+//     <div class="l-ratio__overlay" style="background: #f3f3f3;">Overlay ratio.</div>
+//   </div>
+//   <div class="l-ratio {$modifiers}" style="margin-top:2em;">
+//     <div class="l-ratio__video" style="background: #f3f3f3;text-align: center; line-height: 3em;">Video ratio. 16:9 in mobile, 4:3 in above.</div>
+//   </div>
+// 
+// Styleguide 3.2
+.l-ratio
+  position: relative
+  min-height: em(270)
+
+.l-ratio--broadcast
+  +respond-max($bp__show-background)
+    margin-top: em($ratio__medium)
+  +respond-min-max($bp__desktop, $bp__widescreen)
+    width: 725px
+  +respond-min($bp__widescreen)
+    width: 852px
+
+.l-ratio__overlay
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  text-align: center
+  white-space: nowrap
+  +pseudo-center
+
+.l-ratio__video
+  position: relative
+  width: 100%
+  padding-bottom: 56.25% // 16:9
+  & > *
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  +respond-max($bp__phone-landscape)
+    padding-bottom: 75% // 4:3
+
+.video--is-active
+  .l-ratio__overlay
+    display: none
+
+.video--not-active
+  .m-video__close
+    visibility: hidden
+  .m-video__object
+    visibility: hidden
+    opacity: 0
+    // Strange iOS bug - video still showing through even when closed

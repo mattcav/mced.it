@@ -1,0 +1,48 @@
+html,
+.no-js body
+  height: 100%
+
+img, audio, canvas, embed, object, video 
+  display: block
+  max-width: 100%
+
+img  
+  iframe[src*="maps.google"] &
+    max-width: auto
+    margin: auto
+
+iframe
+  display: block
+
+blockquote
+  color: $color__grey3
+
+address
+  display: block
+  font-style: normal
+  margin-bottom: em($ratio__medium)
+  white-space: pre-line
+
+ins
+  background: #ff9
+  color: #000
+  text-decoration: none
+
+mark
+  font-style: italic
+  @extend .text--bold
+
+pre
+  overflow-x: auto
+
+hr,
+.hr
+  clear: both
+  border: none
+  +set-border(top)
+  margin-top: em($ratio__medium)
+  margin-bottom: em($ratio__medium)
+
+::selection
+  color: $color__white
+  background-color: $color__primary

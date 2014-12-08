@@ -1,0 +1,54 @@
+// Circular image of an artist.
+// 
+// Markup: <div class="o-circle {$modifiers}">
+//   <img class="o-circle__img o-circle__img--full" src="https://api.redbull.tv/v1/images/http:%2F%2Fimages.redbull.tv%2Fimage%2Fupload%2Fv1405374588%2Fwezsn166kimrvl3uksym.jpg/width=360,height=360">
+// </div>
+//
+// .o-circle--big   - Big image (200px wide).
+// .o-circle--huge  - Huge image (240px wide)
+// .o-circle--small - Small image (2.25em wide).
+// 
+// Styleguide 1.2
+.o-circle
+  width: em(140)
+  height: em(140)
+  border-radius: 50%
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  overflow: hidden
+  background-color: $color__grey2
+  color: white
+  +pseudo-center
+
+.o-circle--big
+  +respond-min($bp__desktop)
+    width: em(200)
+    height: em(200)
+
+.o-circle--huge
+  +respond-min-max($bp__phone-landscape, $bp__desktop)
+    width: em(240)
+    height: em(240)
+  +respond-min($bp__desktop)
+    height: em(240)
+    width: em(240)
+
+.o-circle--small
+  width: 2.25em
+  height: 2.25em
+  font-weight: $fonts__bold-weight
+  font-size: em(14)
+
+.o-circle__img
+  vertical-align: middle
+  display: inline-block
+  width: em(80)
+  +respond-min($bp__desktop)
+    width: em(100)
+
+.o-circle__img--full
+  width: 100%
+
+.o-circle--primary
+  background-color: $color__primary

@@ -1,0 +1,20 @@
+// V-Align
+//
+// Vertically align a block.
+// 
+// Markup:
+//   <div class="l-valign" style="height: 20em; text-align: center; background: #f3f3f3;">
+//     <div class="l-valign__child">Vertically aligned content.</div>
+//   </div>
+// 
+// Styleguide 3.3
+.l-valign
+  display: table
+  margin: 0 auto
+  text-align: center
+  height: 100%
+  width: 100%
+
+.l-valign__child
+  display: table-cell
+  vertical-align: middle

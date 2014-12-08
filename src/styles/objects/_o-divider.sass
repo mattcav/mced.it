@@ -1,0 +1,21 @@
+// Divider
+//
+// A simple divider line
+// 
+// Markup: <span class="o-divider"></span>
+// 
+// Styleguide 1.12
+.o-divider
+  margin: 0 em($ratio__medium)
+  background-color: rgba($color__grey5, .5)
+  width: $border-thickness
+  height: em(26)
+  vertical-align: text-bottom
+  display: inline-block
+  +respond-min($bp__iphone-4s)
+    margin: 0 em($ratio__big)
+  +respond-max($bp__phone-landscape)
+    display: block
+    margin: em($ratio__base) auto
+    width: em(26)
+    height: em(2)
