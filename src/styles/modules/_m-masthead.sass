@@ -1,2 +1,18 @@
 .m-masthead
-  @extend .l-block
+
+  +respond-min($bp__phablet)
+    text-align: center
+    margin-bottom: $section-padding
+
+    &__title
+      margin-bottom: 0
+    .o-logo
+      @extend .centered
+
+  +respond-min($bp__tablet-portrait)
+    margin-bottom: $section-padding * 2.5
+
+  +respond-min($bp__tablet-landscape)
+    text-align: left
+    .o-logo
+      margin-left: 0

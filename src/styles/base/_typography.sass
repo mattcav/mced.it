@@ -18,32 +18,34 @@ blockquote, ol, dl, fieldset
 abbr[title]
   border-bottom: none
 
+h1,
 .as-h1
-  font-size: em($ratio__medium)
+  font-size: em($ratio__big)
   font-weight: $fonts__black-weight
   line-height: 1.25
   -webkit-font-smoothing: antialiased
   +respond-min($bp__tablet-landscape)
     font-size: em($ratio__big)
 
+h2,
 .as-h2
-  font-size: em($ratio__medium)
+  font-size: em($ratio__large)
   font-weight: $fonts__bold-weight
   line-height: 1.25
   +respond-min($bp__widescreen)
     font-size: em(30)
-  +respond-max($bp__phone-landscape)
-    text-align: center
 
+h3,
 .as-h3
-  font-size: em(20)
+  font-size: em($ratio__medium)
   font-weight: $fonts__bold-weight
   line-height: 1.25
   +respond-min($bp__widescreen)
     font-size: em($ratio__medium)
 
+h4,
 .as-h4
-  font-size: em(14)
+  font-size: em($ratio__base)
   font-weight: $fonts__bold-weight
   line-height: 1.25
 
@@ -70,6 +72,12 @@ abbr[title]
     font-size: em(20)
   +respond-min($bp__widescreen)
     font-size: em($ratio__medium)
+
+.large-copy
+  font-size: em($ratio__medium)
+  line-height: 1.6
+  +respond-min($bp__tablet-portrait)
+    line-height: 1.8
 
 .uppercase
   font-size: em(18)

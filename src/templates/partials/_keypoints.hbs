@@ -1,0 +1,15 @@
+<section class="m-keypoints margin-double clearfix">
+   {{#each keypoints.keypoints-home}}
+    <article class="m-keypoint">
+      <a href="{{image}}" class="m-keypoint__link">
+        <img src="./assets/images/{{image}}" alt="{{label}}" class="m-keypoint__img o-circle">
+      </a>
+      <a href="{{image}}" class="m-keypoint__link">
+        <h2 class="m-keypoint__title">{{label}}</h2>
+      </a>
+      <p class="m-keypoint__text">
+        {{excerpt}}
+      </p>
+    </article>
+   {{/each}}
+</section>

@@ -1,0 +1,27 @@
+.m-links
+  @extend .clearfix
+
+  &__link
+    display: block
+    padding: 0 0 1em
+
+  +respond-min($bp__phone-landscape)
+    .m-links__title
+      float: left
+      width: percentage(4/12)
+      margin: 0
+    .m-links__list
+      float: left
+      width: percentage(8/12)
+
+  +respond-min($bp__phablet)
+    .m-links__title
+      width: percentage(4/12)
+    .m-links__list
+      width: percentage(8/12)
+
+  +respond-min-max($bp__tablet-portrait, $bp__tablet-landscape)
+    .m-links__title
+      width: 100%
+    .m-links__list
+      width: 100%

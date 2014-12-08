@@ -1,0 +1,28 @@
+{
+  "keypoints-home": [
+    {
+     "order": 1,
+     "id": "1",
+     "label": "Ricerca",
+     "link": "http://www.usertestlab.it/interna.asp?p=1",
+     "image": "placeholder.gif",
+     "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i formati."
+    },
+    {
+     "order": 2,
+     "id": "2",
+     "label": "Progettazione",
+     "link": "http://www.usertestlab.it/interna.asp?p=1",
+     "image": "placeholder.gif",
+     "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i formati."
+    },
+    {
+     "order": 3,
+     "id": "3",
+     "label": "Valutazione",
+     "link": "http://www.usertestlab.it/interna.asp?p=1",
+     "image": "placeholder.gif",
+     "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i formati."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<section class="m-links margin-bottom-regular">
+  <h2 class="m-links__title">Articoli</h2>
+  <ul class="m-links__list">
+  {{#each articles.latests}}
+    <li class="m-links__item">
+      <a href="{{link}}" class="m-links__link">{{title}}</a>
+    </li>
+   {{/each}}
+  </ul>
+</section>

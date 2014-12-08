@@ -1,0 +1,22 @@
+{
+  "latests": [
+    {
+     "order": 1,
+     "id": "1",
+     "title": "Eyetracking, sotto l'heatmap niente!",
+     "link": "http://www.progettareperlepersone.it/dblog/articolo.asp?articolo=122"
+    },
+    {
+     "order": 2,
+     "id": "2",
+     "title": "Sviluppo Agile e User-Centered Design felicemente sposi?",
+     "link": "http://www.progettareperlepersone.it/dblog/articolo.asp?articolo=104"
+    },
+    {
+     "order": 3,
+     "id": "3",
+     "title": "Cognitive Walkthrough con i personaggi",
+     "link": "http://www.progettareperlepersone.it/dblog/articolo.asp?articolo=87"
+    }
+  ]
+}

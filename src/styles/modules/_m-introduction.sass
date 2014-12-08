@@ -1,0 +1,29 @@
+.m-introduction
+
+  &__text
+    @extend .large-copy
+  &__img
+    margin-bottom: $section-padding
+
+  +respond-min($bp__tablet-portrait)
+    @extend .centered
+    margin-top: $section-padding
+    margin-bottom: $section-padding
+    display: table
+    text-align: center
+    height: 100%
+    width: 100%
+
+    &__text,
+    &__img
+      display: table-cell
+      vertical-align: middle
+
+    &__text
+      width: 55%
+    &__img
+      margin-bottom: 0
+
+  +respond-min($bp__tablet-landscape)
+    margin-top: $section-padding*3
+    margin-bottom: $section-padding*3

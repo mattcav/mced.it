@@ -1,0 +1,51 @@
+.m-navigation
+  $padding-item: .25em 0
+
+  @extend .padding-regular
+
+  background: $color__black
+  color: $color__white
+
+  &__item
+    @extend .clearfix
+    //font-size: em($ratio__medium)
+    &:before
+      content: "/"
+      float: left
+      padding: $padding-item
+      margin-right: .25em
+      color: $color__primary
+      font-size: em($ratio__large)
+      line-height: 18px
+
+  &__link
+    display: block
+    padding: $padding-item
+    color: $color__white
+    +on-interaction
+      color: darken($color__white, 20%)
+
+  +respond-min($bp__phablet)
+    background-color: $color__white
+    color: $color__text
+
+    &__item
+      display: inline-block
+      &:before
+        content: "/"
+        display: inline-block
+        padding: $padding-item
+        margin-right: .25em
+        color: $color__primary
+      &:first-child:before
+        content: ""
+        margin-right: 0
+
+    &__link
+      display: inline-block
+      color: $color__text
+      font-weight: $fonts__bold-weight
+      +on-interaction
+        color: $color__primary
+
+
