@@ -34,10 +34,15 @@
     padding-left: $section-padding * 1.5
     padding-right: $section-padding * 1.5
 
-.l-block--full-width
+.l-block--wider
+  padding-left: $section-padding * 1.25
+  padding-right: $section-padding * 1.25
+  +respond-min($bp__phone-landscape)
+    padding-left: $section-padding * 2.25
+    padding-right: $section-padding * 2.25
   +respond-min($bp__widescreen)
-    padding-left: em(100)
-    padding-right: em(100)
+    padding-left: $section-padding * 2.5
+    padding-right: $section-padding * 2.5
 
 .l-block--black
   background-color: $color__black

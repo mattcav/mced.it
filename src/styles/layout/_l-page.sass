@@ -7,11 +7,16 @@
 
 .l-page
 
+  &__main,
+  &__side
+    margin-bottom: $section-padding
+
   +respond-min($bp__tablet-portrait)
     &__main,
     &__side
       float: left
       width: 50%
+
 
   +respond-min($bp__tablet-landscape)
     &__main

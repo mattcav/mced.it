@@ -4,7 +4,7 @@
 @function rem($px, $base: 16)
   @return ($px / $base) + rem
 
-=font-size($font-size, $line-height: true, $rem: false) 
+=font-size($font-size, $line-height: true, $rem: false)
   @if $rem == true
     font-size: rem($font-size)
     .no-cssremunit &
@@ -61,7 +61,7 @@
   &::-moz-placeholder
     @content
   &:-ms-input-placeholder
-    @content  
+    @content
 
 =pseudo-center
   &:after
@@ -147,18 +147,26 @@
 
 =link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false)
   color: $normal
-  @if $visited 
-    &:visited 
+  @if $visited
+    &:visited
       color: $visited
-    
-  @if $focus 
-    &:focus 
+
+  @if $focus
+    &:focus
       color: $focus
-    
-  @if $hover 
-    &:hover 
+
+  @if $hover
+    &:hover
       color: $hover
-    
+
   @if $active
     &:active
       color: $active;
+
+=position($position, $args)
+  position: $position
+  $offsets: top right bottom left
+  @each $o in $offsets
+    $i: index($args, $o)
+    @if $i and $i + 1 <= length($args) and type-of( nth($args, $i + 1) ) == number
+      #{$o}: nth($args, $i + 1)

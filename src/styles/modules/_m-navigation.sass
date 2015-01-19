@@ -1,5 +1,5 @@
 .m-navigation
-  $padding-item: .25em 0
+  $padding-item: 1em
 
   @extend .padding-regular
 
@@ -8,19 +8,21 @@
 
   &__item
     @extend .clearfix
-    //font-size: em($ratio__medium)
+    position: relative
+    border-bottom: 1px solid $color__grey5
+
     &:before
+      +position(absolute, top -20% left 0)
       content: "/"
-      float: left
-      padding: $padding-item
-      margin-right: .25em
+      //float: left
+      padding: $padding-item 0
       color: $color__primary
       font-size: em($ratio__large)
       line-height: 18px
 
   &__link
     display: block
-    padding: $padding-item
+    padding: $padding-item 1.5rem
     color: $color__white
     +on-interaction
       color: darken($color__white, 20%)
@@ -28,24 +30,49 @@
   +respond-min($bp__phablet)
     background-color: $color__white
     color: $color__text
+    margin-left: -$padding-item / 2
 
     &__item
       display: inline-block
+      border-bottom: medium none
       &:before
+        position: relative
+        top: 0
         content: "/"
         display: inline-block
-        padding: $padding-item
-        margin-right: .25em
+        padding: 0
+        margin-right: 0em
         color: $color__primary
       &:first-child:before
+        display: none
         content: ""
         margin-right: 0
 
     &__link
+      padding: $padding-item $padding-item / 2
       display: inline-block
       color: $color__text
       font-weight: $fonts__bold-weight
       +on-interaction
         color: $color__primary
 
+    &__control
+      @extend .o-button
+      display: none
+
+
+.cutsthemustard
+
+  +respond-max($bp__phablet)
+    .m-navigation
+      +position(fixed, top 0 left 0)
+      height: 100%
+      width: 75%
+      transition: transform 0.25s ease 0s
+      transform: translateX(-100%)
+      &__control
+        display: block
+
+.js-navigation-active .m-navigation
+  transform: translateX(0%)
 

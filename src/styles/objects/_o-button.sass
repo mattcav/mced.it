@@ -19,56 +19,24 @@
 // Styleguide 1.1
 
 .o-button
-  padding-left: em($ratio__base)
-  padding-right: em($ratio__base)
+  padding-left: em($ratio__base * 1.25)
+  padding-right: em($ratio__base * 1.25)
   display: block
-  box-sizing: border-box
   text-align: center
-  min-width: 8.75em
-  line-height: em($object-height)
-  font-weight: $fonts__bold-weight
+  line-height: em($object-height__small)
   border-radius: $border-radius
-  &:before // .o-button.o-icon margin
-    margin-right: .5em
+  border: 2px solid $color__primary
+  background: $color__white
   transition: background-color $transition__duration, color $transition__duration
-  +link
-    background-color: $color__grey2
-    color: white
-  +on-interaction
-    background-color: $color__black
-  +respond-max($bp__phone-landscape)
-    margin-top: em($ratio__small)
-  +respond-min($bp__phone-landscape)
-    display: inline-block
-
-.o-button--primary
-  +link
-    background-color: $color__primary
-  +on-interaction
-    background-color: $color__primary--light
-
-.o-button--secondary
-  +link
-    background-color: $color__green
-  +on-interaction
-    background-color: darken($color__green, 5%)
-
-
-.o-button--light
-  +link
-    background-color: $color__grey3
-  +on-interaction
-    background-color: $color__grey5
-
-.o-button--state
-  +link
-    background-color: $color__grey3
   +on-interaction
     background-color: $color__primary
+    color: $color__white
 
 .o-button--small
-  font-size: em(14)
-  line-height: em($object-height__small)
+  font-size: em($ratio__small)
+
+.o-button--medium
+  line-height: em($object-height)
 
 .o-button--large
   line-height: em($object-height__large)

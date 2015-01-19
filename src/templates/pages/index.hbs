@@ -6,12 +6,29 @@ lead: Usertest/lab
 {{> _introduction}}
 {{> _keypoints}}
 
-<section class="l-page margin-regular l-block">
-  <section class="l-page__main l-block">
-    {{> _latest-articles}}
-    {{> _latest-articles}}
+<section class="l-page margin-double l-block">
+  <section class="l-page__main">
+    {{> _links case-studies}}
+    {{> _links articles}}
   </section>
-  <aside class="l-page__side l-block">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas modi quos dicta molestias eum expedita assumenda magni, rem quisquam mollitia aliquid odio eaque amet, quod maxime veniam, porro deserunt?
+  <aside class="l-page__side">
+   {{> _card usabilita}}
   </aside>
 </section>
+
+<div class="l-block">
+  <section class="l-boxes">
+    <h2 class="l-boxes__title">
+      Parte di
+    </h2>
+    <div class="l-boxes__box">
+      {{> _banner ux-university}}
+    </div>
+    <div class="l-boxes__box">
+      {{> _banner ux-fellows}}
+    </div>
+    <div class="l-boxes__box">
+      {{> _banner uxpa}}
+    </div>
+  </section>
+</div>
