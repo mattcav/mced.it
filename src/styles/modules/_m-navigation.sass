@@ -57,12 +57,10 @@
         color: $color__primary
 
     &__control
-      @extend .o-button
-      display: none
+      display: none !important
 
 
 .cutsthemustard
-
   +respond-max($bp__phablet)
     .m-navigation
       +position(fixed, top 0 left 0)
@@ -71,6 +69,9 @@
       transition: transform 0.25s ease 0s
       transform: translateX(-100%)
       &__control
+        @extend .o-button
+        float: right
+        margin: 1rem 1rem 0 0
         display: block
 
 .js-navigation-active .m-navigation

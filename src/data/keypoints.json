@@ -5,7 +5,7 @@
      "id": "1",
      "label": "Ricerca",
      "link": "http://www.usertestlab.it/interna.asp?p=1",
-     "image": "placeholder.gif",
+     "image": "icon1@2x.png",
      "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i&nbsp;formati."
     },
     {
@@ -13,7 +13,7 @@
      "id": "2",
      "label": "Progettazione",
      "link": "http://www.usertestlab.it/interna.asp?p=1",
-     "image": "placeholder.gif",
+     "image": "icon2@2x.png",
      "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i&nbsp;formati."
     },
     {
@@ -21,7 +21,7 @@
      "id": "3",
      "label": "Valutazione",
      "link": "http://www.usertestlab.it/interna.asp?p=1",
-     "image": "placeholder.gif",
+     "image": "icon3@2x.png",
      "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i&nbsp;formati."
     }
   ]

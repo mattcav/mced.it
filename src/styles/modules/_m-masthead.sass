@@ -1,8 +1,7 @@
 .m-masthead
   @extend .clearfix
 
-  &__title,
-  &__button
+  &__title
     margin: 1rem 0
 
   +respond-min($bp__phablet)
@@ -14,10 +13,6 @@
 
     .o-logo
       @extend .centered
-
-
-  +respond-min($bp__tablet-portrait)
-    margin-bottom: $section-padding * 2.5
 
   +respond-min($bp__tablet-landscape)
     text-align: left
