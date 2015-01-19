@@ -1,5 +1,5 @@
 {
-  "name": "assemble-foundation",
+  "name": "usertest/lab",
   "dependencies": {
     "foundation": "zurb/bower-foundation"
   }
