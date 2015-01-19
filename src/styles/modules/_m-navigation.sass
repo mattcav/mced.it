@@ -1,5 +1,7 @@
 .m-navigation
   $padding-item: 1em
+  position: relative
+  z-index: 100
 
   @extend .padding-regular
 
@@ -53,6 +55,8 @@
       display: inline-block
       color: $color__text
       font-weight: $fonts__bold-weight
+      &:visited
+        color: $color__text
       +on-interaction
         color: $color__primary
 

@@ -890,6 +890,9 @@ h4, .as-h4 {
   margin: 0 auto;
   width: 100%;
   max-width: 64rem; }
+  @media (min-width: 90.0625em) {
+    .l-block__container {
+      max-width: 72rem; } }
 
 @media (min-width: 30em) {
   .l-boxes {
@@ -1286,6 +1289,8 @@ h4, .as-h4 {
  }
 
 .m-navigation {
+  position: relative;
+  z-index: 100;
   background: #131313;
   color: #FFF; }
   .m-navigation__item {
@@ -1331,6 +1336,8 @@ h4, .as-h4 {
         display: inline-block;
         color: #131313;
         font-weight: 700; }
+        .m-navigation__link:visited {
+          color: #131313; }
         .m-navigation__link:hover, .m-navigation__link:active, .m-navigation__link:focus {
           color: #e60002; }
       .m-navigation__control {
