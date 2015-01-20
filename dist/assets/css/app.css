@@ -1267,6 +1267,12 @@ h4, .as-h4 {
   .m-links .m-links__list {
     width: 100%; }
  }
+@media (min-width: 80em) {
+  .m-links .m-links__title {
+    position: relative;
+    top: -15px;
+    border-bottom: 1px solid #f3f3f3; }
+ }
 
 .m-masthead__title {
   margin: 1rem 0; }
