@@ -12,8 +12,8 @@
 .l-boxes__box
   @extend .l-block
   @extend .centered
-  margin-bottom: 2em
-  padding-bottom: 1.5em
+  margin-bottom: 1em
+  padding-bottom: 0.5em
   max-width: $narrow-col
 
   img
@@ -36,25 +36,25 @@
     padding-left: $section-padding * 2.5
     padding-right: $section-padding * 2.5
 
-  &:last-child
-    +respond-min($bp__phone-landscape)
+
+
+// flexbox
+.l-boxes
+  +respond-min($bp__phone-landscape)
+    display: flex
+    flex-wrap: wrap
+.l-boxes__title
+  +respond-min($bp__phone-landscape)
+    flex: 1 1 100%
+.l-boxes__box
+  +respond-min($bp__phone-landscape)
+    border-right: 1px solid $color__grey2
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    &:last-child
       border-right: medium none
-
-
-.flexbox
-  .l-boxes
-    +respond-min($bp__phone-landscape)
-      display: flex
-      flex-wrap: wrap
-  .l-boxes__title
-    +respond-min($bp__phone-landscape)
-      flex: 1 1 100%
-  .l-boxes__box
-    +respond-min($bp__phone-landscape)
-      flex: 1
-      display: flex
-      align-items: center
-      justify-content: center
 
 
 

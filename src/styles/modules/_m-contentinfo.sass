@@ -3,6 +3,20 @@
   margin-bottom: $h4-margin-bottom
   small
     display: block
+  &__list
+    margin-top: $section-padding
+  &__item
+    margin: 0 .5rem
+  &__link
+    color: $color__text
+    font-size: em($ratio__small)
+    font-weight: 700
+    +on-interaction
+      color: $color__red
+
+  +respond-min($bp__phone-landscape)
+    &__item
+      display: inline-block
 
   +respond-min($bp__desktop)
     &__copyright

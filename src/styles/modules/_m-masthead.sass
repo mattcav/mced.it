@@ -1,24 +1,65 @@
 .m-masthead
   @extend .clearfix
 
+  &__row
+    @extend .l-block__container
+    position: relative
+
+
   &__title
-    margin: 1rem 0
+    margin: $rithm 0 0
+
+  .o-logo
+    width: 11rem
+    height: auto
+
+  .o-claim
+    clear: both
+
+  &__sup
+    display: none
+
 
   +respond-min($bp__phablet)
     text-align: center
     margin-bottom: $section-padding
+    background-color: $color__grey1
 
     &__title
       margin-bottom: 0
 
     .o-logo
       @extend .centered
+      width: 15rem
+
 
   +respond-min($bp__tablet-landscape)
     text-align: left
     .o-logo
       margin-left: 0
 
+    .o-claim
+      +position(absolute, top 2.75rem right 0)
+
+    &__sup
+      display: block
+      background: $color__grey1
+      padding: .5rem 0 0
+      a
+        font-style: italic
+        color: $color__grey5
+        font-size: em($ratio__small)
+        +on-interaction
+          color: $color__red
+
+    &__lang
+      float: left
+
+    &__socials
+      float: right
+
+    &__social
+      display: inline-block
 
 
 .cutsthemustard
@@ -26,7 +67,5 @@
     .m-masthead
       .o-logo
         margin-left: 0
-        width: 100%
       &__title
-        width: 70%
         float: left

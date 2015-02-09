@@ -1,0 +1,88 @@
+{
+  "list": [
+    {
+     "order": 1,
+     "id": "1",
+     "label": "Almaviva",
+     "link": ""
+    },
+    {
+     "order": 2,
+     "id": "2",
+     "label": "Cresense <em>per Microsoft</em>",
+     "link": ""
+    },
+    {
+     "order": 3,
+     "id": "3",
+     "label": "Client2",
+     "link": ""
+    },
+    {
+     "order": 4,
+     "id": "4",
+     "label": "Credem",
+     "link": ""
+    },
+    {
+     "order": 5,
+     "id": "5",
+     "label": "Università Cattolica del Sacro Cuore",
+     "link": ""
+    },
+    {
+     "order": 6,
+     "id": "6",
+     "label": "Kibernetes",
+     "link": ""
+    },
+    {
+     "order": 7,
+     "id": "7",
+     "label": "Università Cattolica del Sacro Cuore",
+     "link": ""
+    },
+    {
+     "order": 8,
+     "id": "8",
+     "label": "Amberlight <em>per Vodafone</em>",
+     "link": ""
+    },
+    {
+     "order": 9,
+     "id": "9",
+     "label": "Twice Reply <em>per Ferrari</em>",
+     "link": ""
+    },
+    {
+     "order": 10,
+     "id": "10",
+     "label": "Università Cattolica del Sacro Cuore",
+     "link": ""
+    },
+    {
+     "order": 11,
+     "id": "11",
+     "label": "Adria Lab <em>per Fresenius Medical Care</em>",
+     "link": ""
+    },
+    {
+     "order": 12,
+     "id": "12",
+     "label": "Bitmama <em>per Magneti Marelli</em>",
+     "link": ""
+    },
+    {
+     "order": 13,
+     "id": "13",
+     "label": "Whitehall Reply <em>per ICCD</em>",
+     "link": ""
+    },
+    {
+     "order": 14,
+     "id": "14",
+     "label": "InfoCamere",
+     "link": ""
+    }
+  ]
+}

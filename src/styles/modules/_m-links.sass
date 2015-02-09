@@ -4,9 +4,22 @@
   &__link
     display: block
     padding: 0 0 1em
+  &__title
+    border-bottom: 1px solid $color__grey1
+  &__title--banner,
+  &__title--payoff
+    margin-bottom: 0 !important
+  &__banner,
+  &__payoff
+    @extend .l-block
+    clear: both
+    font-size: em($ratio__small)
+    font-style: italic
 
   +respond-min($bp__phone-landscape)
-    .m-links__title
+    .m-links__title,
+    .m-links__payoff,
+    .m-links__banner
       float: left
       width: percentage(4/12)
       margin: 0
@@ -15,13 +28,19 @@
       width: percentage(8/12)
 
   +respond-min($bp__phablet)
-    .m-links__title
+    .m-links__title,
+    .m-links__payoff,
+    .m-links__banner
       width: percentage(4/12)
     .m-links__list
       width: percentage(8/12)
+    .m-links__banner
+      max-width: $narrow-col
 
   +respond-min-max($bp__tablet-portrait, $bp__tablet-landscape)
-    .m-links__title
+    .m-links__title,
+    .m-links__banner
+    .m-links__payoff,
       margin-bottom: .83em
       width: 100%
     .m-links__list

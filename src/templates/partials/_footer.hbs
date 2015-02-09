@@ -7,4 +7,13 @@
       {{{footer.contacts}}}
     </small>
   </div>
+  <div class="m-contentinfo__inner l-block">
+    <ul class="m-contentinfo__list">
+       {{#each footer.sitemap}}
+       <li class="m-contentinfo__item">
+         <a href="{{link}}" class="m-contentinfo__link">{{label}}</a>
+       </li>
+       {{/each}}
+    </ul>
+  </div>
 </footer>

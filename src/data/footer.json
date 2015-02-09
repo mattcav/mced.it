@@ -1,4 +1,36 @@
 {
-  "copyright": "©2015 Stefano Dominici &ndash; ®2004 usertest/lab sono marchi registrati",
-  "contacts": "<strong>usertest/lab</strong> &ndash; Roma &ndash; P.IVA 12554251004"
+  "copyright": "©2015 usertestlab &ndash; ®2004 usertest/lab sono marchi registrati",
+  "contacts": "<strong>usertest/lab</strong> &ndash; Roma &ndash; P.IVA 12554251004",
+  "sitemap": [
+    {
+     "order": 1,
+     "id": "1",
+     "label": "Usabilità di un sito web",
+     "link": "http://usertestlab.it/usability/usabilita.html"
+    },
+    {
+     "order": 2,
+     "id": "2",
+     "label": "test di usabilità",
+     "link": "http://usertestlab.it/usabilitytest/testusabilita.html"
+    },
+    {
+     "order": 3,
+     "id": "3",
+     "label": "user centred design",
+     "link": "http://usertestlab.it/usercentreddesign/usercentreddesign.html"
+    },
+    {
+     "order": 4,
+     "id": "4",
+     "label": "prototipi su carta di siti web e apps",
+     "link": "http://usertestlab.it/usabilitytest/prototipicarta.html"
+    },
+    {
+     "order": 5,
+     "id": "5",
+     "label": "mappa del sito",
+     "link": "http://usertestlab.it/sitemap.html"
+    }
+  ]
 }

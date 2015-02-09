@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" class="flexbox">
+<html lang="it" class="">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,54 +7,79 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/app.css">
+    <script async src="assets/js/modernizr.js"></script>
     <script src="//use.typekit.net/dhr7qos.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-
 
   </head>
   <body>
 
-
-    <main id="main" class="main l-block__container" role="main">
-      <header class="m-masthead" role="banner">
-  <h1 class="m-masthead__title l-block">
-    <a href="./" class="m-masthead__home-link">
-      <img src="assets/images/logo@2x.jpg" alt="Usertest/lab" class="o-logo">
-    </a>
-  </h1>
-
-  <button class="m-navigation__control m-masthead__button js-navigation-control" type="button">
-    Menù
-  </button>
-
-  <nav class="m-navigation l-block">
-    <ul class="m-navigation__list">
-      
-        <li class="m-navigation__item">
-          <a href="http://www.usertestlab.it/interna.asp?p=1" class="m-navigation__link">Chi siamo</a>
-        </li>
-      
-        <li class="m-navigation__item">
-          <a href="http://www.usertestlab.it/interna.asp?p=2" class="m-navigation__link">Clienti e progetti</a>
-        </li>
-      
-        <li class="m-navigation__item">
-          <a href="http://www.usertestlab.it/interna.asp?p=3" class="m-navigation__link">Contatti e preventivi</a>
-        </li>
-      
-        <li class="m-navigation__item">
-          <a href="http://www.usertestlab.it/interna.asp?p=4" class="m-navigation__link">Rassegna stampa</a>
-        </li>
-      
-        <li class="m-navigation__item">
-          <a href="http://www.usertestlab.it/interna.asp?p=32" class="m-navigation__link">Laboratorio per test di usabilità e focus group</a>
-        </li>
-      
+    <div class="m-masthead__sup">
+  <div class="m-masthead__row">
+    <div class="m-masthead__lang l-block">
+      <a href="#">english version</a>
+    </div>
+    <ul class="m-masthead__socials l-block">
+      <li class="m-masthead__social">
+        <a href="http://facebook.com/">
+          Facebook
+        </a>
+      </li>
+      /
+      <li class="m-masthead__social">
+        <a href="http://twitter.com/">
+          Twitter
+        </a>
+      </li>
     </ul>
-  </nav>
+  </div>
+</div>
+<header class="m-masthead" role="banner">
+  <div class="m-masthead__row">
+    <h1 class="m-masthead__title l-block">
+      <a href="./" class="m-masthead__home-link">
+        <img src="assets/images/logo@2x.png" alt="Usertest/lab" class="o-logo">
+      </a>
+    </h1>
+
+    <button class="m-navigation__control m-masthead__button js-navigation-control" type="button">
+      menù
+    </button>
+
+    <p class="o-claim l-block">experience and service design</p>
+  </div>
+
+    <nav class="m-navigation l-block">
+      <div class="m-masthead__row">
+        <ul class="m-navigation__list">
+          
+            <li class="m-navigation__item">
+              <a href="http://www.usertestlab.it/interna.asp?p=1" class="m-navigation__link">Chi siamo</a>
+            </li>
+          
+            <li class="m-navigation__item">
+              <a href="http://www.usertestlab.it/interna.asp?p=2" class="m-navigation__link">Clienti e progetti</a>
+            </li>
+          
+            <li class="m-navigation__item">
+              <a href="http://www.usertestlab.it/interna.asp?p=3" class="m-navigation__link">Contatti e preventivi</a>
+            </li>
+          
+            <li class="m-navigation__item">
+              <a href="http://www.usertestlab.it/interna.asp?p=4" class="m-navigation__link">Rassegna stampa</a>
+            </li>
+          
+            <li class="m-navigation__item">
+              <a href="http://www.usertestlab.it/interna.asp?p=32" class="m-navigation__link">Laboratorio per test di usabilità e focus group</a>
+            </li>
+          
+        </ul>
+      </div>
+    </nav>
 
 </header>
 
+    <main id="main" class="main l-block__container" role="main">
       
 <section class="m-introduction">
   <img src="assets/images/header-image1@2x.png" alt="Benvenuti su Usertest/lab" class="m-introduction__img m-introduction__img">
@@ -109,7 +134,11 @@ Proponiamo re&ndash;design completi dell&#39;<a href="#">architettura informativ
 <section class="l-page margin-double l-block">
   <section class="l-page__main">
     <section class="m-links margin-bottom-regular">
-  <h2 class="m-links__title l-block">Case study</h2>
+  <h2 class="m-links__title l-block  m-links__title--payoff">Case study</h2>
+  
+  
+    <p class="m-links__payoff">Il metodo e i risultati</p>
+  
   <ul class="m-links__list l-block">
   
     <li class="m-links__item">
@@ -128,7 +157,11 @@ Proponiamo re&ndash;design completi dell&#39;<a href="#">architettura informativ
 </section>
 
     <section class="m-links margin-bottom-regular">
-  <h2 class="m-links__title l-block">Articoli</h2>
+  <h2 class="m-links__title l-block m-links__title--banner ">Articoli</h2>
+  
+    <img class="m-links__banner" src="./assets/images/progettareperlepersone.gif" alt="Dal blog Progettare per le persone">
+  
+  
   <ul class="m-links__list l-block">
   
     <li class="m-links__item">
@@ -148,13 +181,69 @@ Proponiamo re&ndash;design completi dell&#39;<a href="#">architettura informativ
 
   </section>
   <aside class="l-page__side">
-   <article class="m-card">
-  <div class="m-card__inner">
-    <h2 class="m-card__title">Usabilità</h2>
-    <p class="m-card__content">
-      È l'efficacia, l'efficienza e la soddisfazione con cui determinati utenti possono raggiungere determinati obiettivi in un determinato contesto d'uso (ISO 9241). Per saperne di più scarica la nostra <a href='http://www.usertestlab.it/interna.asp?p=19'>Guida all'usabilità</a>.
-    </p>
-  </div>
+   <article class="m-clients">
+  <h2 class="m-clients__title">
+    Si sono affidati a noi
+  </h2>
+  <ul class="m-clients__list">
+  
+    <li class="m-clients__item">
+      Almaviva
+    </li>
+   
+    <li class="m-clients__item">
+      Cresense <em>per Microsoft</em>
+    </li>
+   
+    <li class="m-clients__item">
+      Client2
+    </li>
+   
+    <li class="m-clients__item">
+      Credem
+    </li>
+   
+    <li class="m-clients__item">
+      Università Cattolica del Sacro Cuore
+    </li>
+   
+    <li class="m-clients__item">
+      Kibernetes
+    </li>
+   
+    <li class="m-clients__item">
+      Università Cattolica del Sacro Cuore
+    </li>
+   
+    <li class="m-clients__item">
+      Amberlight <em>per Vodafone</em>
+    </li>
+   
+    <li class="m-clients__item">
+      Twice Reply <em>per Ferrari</em>
+    </li>
+   
+    <li class="m-clients__item">
+      Università Cattolica del Sacro Cuore
+    </li>
+   
+    <li class="m-clients__item">
+      Adria Lab <em>per Fresenius Medical Care</em>
+    </li>
+   
+    <li class="m-clients__item">
+      Bitmama <em>per Magneti Marelli</em>
+    </li>
+   
+    <li class="m-clients__item">
+      Whitehall Reply <em>per ICCD</em>
+    </li>
+   
+    <li class="m-clients__item">
+      InfoCamere
+    </li>
+   
+  </ul>
 </article>
 
   </aside>
@@ -195,11 +284,36 @@ Proponiamo re&ndash;design completi dell&#39;<a href="#">architettura informativ
       <footer class="m-contentinfo" role="contentinfo">
   <div class="m-contentinfo__inner l-block">
     <small class="m-contentinfo__copyright">
-      ©2015 Stefano Dominici &ndash; ®2004 usertest/lab sono marchi registrati
+      ©2015 usertestlab &ndash; ®2004 usertest/lab sono marchi registrati
     </small>
     <small class="m-contentinfo__contacts">
       <strong>usertest/lab</strong> &ndash; Roma &ndash; P.IVA 12554251004
     </small>
+  </div>
+  <div class="m-contentinfo__inner l-block">
+    <ul class="m-contentinfo__list">
+       
+       <li class="m-contentinfo__item">
+         <a href="http://usertestlab.it/usability/usabilita.html" class="m-contentinfo__link">Usabilità di un sito web</a>
+       </li>
+       
+       <li class="m-contentinfo__item">
+         <a href="http://usertestlab.it/usabilitytest/testusabilita.html" class="m-contentinfo__link">test di usabilità</a>
+       </li>
+       
+       <li class="m-contentinfo__item">
+         <a href="http://usertestlab.it/usercentreddesign/usercentreddesign.html" class="m-contentinfo__link">user centred design</a>
+       </li>
+       
+       <li class="m-contentinfo__item">
+         <a href="http://usertestlab.it/usabilitytest/prototipicarta.html" class="m-contentinfo__link">prototipi su carta di siti web e apps</a>
+       </li>
+       
+       <li class="m-contentinfo__item">
+         <a href="http://usertestlab.it/sitemap.html" class="m-contentinfo__link">mappa del sito</a>
+       </li>
+       
+    </ul>
   </div>
 </footer>
 

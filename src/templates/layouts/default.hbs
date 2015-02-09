@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" class="flexbox">
+<html lang="it" class="">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,16 +7,15 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{assets}}/css/app.css">
+    <script async src="{{assets}}/js/modernizr.js"></script>
     <script src="//use.typekit.net/dhr7qos.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-
 
   </head>
   <body>
 
-
+    {{> _header}}
     <main id="main" class="main l-block__container" role="main">
-      {{> _header}}
       {{> body }}
       {{> _footer}}
 
