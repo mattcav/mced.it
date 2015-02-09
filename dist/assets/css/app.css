@@ -41,7 +41,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-  -ms-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%;
   /* 2 */ }
 
 /**
@@ -190,7 +190,7 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-  padding: 0
+  padding: 0;
   /* 2 */ }
 
 /**
@@ -203,7 +203,7 @@ button, input, select, textarea {
   /* 1 */
   font-size: 100%;
   /* 2 */
-  margin: 0
+  margin: 0;
   /* 3 */ }
 
 /**
@@ -232,7 +232,7 @@ button, select {
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-  cursor: pointer
+  cursor: pointer;
   /* 3 */ }
 
 /**
@@ -248,7 +248,7 @@ button[disabled], html input[disabled] {
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0
+  padding: 0;
   /* 2 */ }
 
 /**
@@ -283,7 +283,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 textarea {
   overflow: auto;
   /* 1 */
-  vertical-align: top
+  vertical-align: top;
   /* 2 */ }
 
 /* ==========================================================================
@@ -1204,9 +1204,19 @@ h4, .as-h4, .l-article h3 {
       width: 55%; }
     .m-introduction__img {
       margin-bottom: 0;
+<<<<<<< HEAD
       padding: 0;
       width: 100%;
       max-width: 100%; } }
+=======
+      width: 100%; }
+    .m-introduction__img--child {
+      -webkit-transform: scale(1.1) translateX(-6%) translateY(-9%);
+              transform: scale(1.1) translateX(-6%) translateY(-9%); }
+    .m-introduction__img--baloon {
+      -webkit-transform: scale(1) translateX(0%) translateY(-13%);
+              transform: scale(1) translateX(0%) translateY(-13%); } }
+>>>>>>> 92a50d153485420dd170e413d3af9b5f79fe8b0d
 @media (min-width: 64em) {
   .m-introduction {
     margin-top: 4.125rem;
@@ -1259,6 +1269,12 @@ h4, .as-h4, .l-article h3 {
 
   .m-links .m-links__list {
     width: 100%; }
+ }
+@media (min-width: 80em) {
+  .m-links .m-links__title {
+    position: relative;
+    top: -15px;
+    border-bottom: 1px solid #f3f3f3; }
  }
 
 .m-masthead__row {

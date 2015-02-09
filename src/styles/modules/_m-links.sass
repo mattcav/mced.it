@@ -45,6 +45,11 @@
       width: 100%
     .m-links__list
       width: 100%
+  +respond-min($bp__desktop)
+    .m-links__title
+      position: relative
+      top: -15px
+      border-bottom: 1px solid $color__grey1
 
 .m-links__title
   @extend .as-h3
