@@ -613,18 +613,18 @@ input[type=checkbox], input[type=radio] {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .l-block:before, .l-article:before, .l-boxes__box:before, .m-card:before, .m-keypoint:before, .m-links__banner:before, .m-links__payoff:before, .m-clients:before, .l-block__container:before, .m-masthead__row:before, .l-boxes:before, .m-links:before, .m-masthead:before, .m-navigation__item:before, .clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .m-clients:after, .l-block__container:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
+.clearfix:before, .l-block:before, .l-article:before, .l-boxes__box:before, .m-card:before, .m-clients:before, .m-keypoint:before, .m-links__banner:before, .m-links__payoff:before, .l-block__container:before, .m-masthead__row:before, .l-boxes:before, .m-links:before, .m-masthead:before, .m-navigation__item:before, .clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .m-clients:after, .l-block__container:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
+.clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
   clear: both; }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix, .l-block, .l-article, .l-boxes__box, .m-card, .m-keypoint, .m-links__banner, .m-links__payoff, .m-clients, .l-block__container, .m-masthead__row, .l-boxes, .m-links, .m-masthead, .m-navigation__item {
+.clearfix, .l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff, .l-block__container, .m-masthead__row, .l-boxes, .m-links, .m-masthead, .m-navigation__item {
   *zoom: 1; }
 
 a {
@@ -782,7 +782,7 @@ h2, .as-h2 {
   margin-bottom: 1.375rem;
   margin-top: 2.75rem; }
 
-h3, .as-h3, .l-article h2, .l-boxes__title, .m-card__title, .m-keypoint__title, .m-links__title, .m-clients__title {
+h3, .as-h3, .l-article h2, .l-boxes__title, .m-card__title, .m-clients__title, .m-keypoint__title, .m-links__title {
   font-size: 1.625rem;
   font-weight: 700;
   line-height: 2.75rem;
@@ -860,15 +860,15 @@ h4, .as-h4, .l-article h3 {
 .l-article {
   margin: 0 0 4.125rem; }
 
-.l-block, .l-article, .l-boxes__box, .m-card, .m-keypoint, .m-links__banner, .m-links__payoff, .m-clients {
+.l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
   padding-left: 1.375rem;
   padding-right: 1.375rem; }
   @media (min-width: 30em) {
-    .l-block, .l-article, .l-boxes__box, .m-card, .m-keypoint, .m-links__banner, .m-links__payoff, .m-clients {
+    .l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
       padding-left: 1.71875rem;
       padding-right: 1.71875rem; } }
   @media (min-width: 90.0625em) {
-    .l-block, .l-article, .l-boxes__box, .m-card, .m-keypoint, .m-links__banner, .m-links__payoff, .m-clients {
+    .l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
       padding-left: 2.0625rem;
       padding-right: 2.0625rem; } }
 
@@ -1156,6 +1156,22 @@ h4, .as-h4, .l-article h3 {
   .m-card__title {
     margin-top: 0; }
 
+.m-clients__title {
+  border-bottom: 1px solid #f3f3f3; }
+.m-clients__item {
+  margin: 0.75rem 0;
+  font-weight: 600; }
+  .m-clients__item em {
+    font-weight: 400; }
+  .m-clients__item:before {
+    content: "/";
+    color: #e60002; }
+@media (min-width: 48em) {
+  .m-clients {
+    margin-top: 0 !important; }
+    .m-clients__title {
+      margin-top: 0; } }
+
 .m-contentinfo {
   text-align: center;
   margin-bottom: 1.375rem; }
@@ -1184,7 +1200,7 @@ h4, .as-h4, .l-article h3 {
  }
 
 .m-introduction__text {
-  text-align: center; }
+  text-align: left; }
 .m-introduction__img {
   margin-bottom: 1.375rem;
   width: 100%;
@@ -1204,19 +1220,9 @@ h4, .as-h4, .l-article h3 {
       width: 55%; }
     .m-introduction__img {
       margin-bottom: 0;
-<<<<<<< HEAD
       padding: 0;
       width: 100%;
       max-width: 100%; } }
-=======
-      width: 100%; }
-    .m-introduction__img--child {
-      -webkit-transform: scale(1.1) translateX(-6%) translateY(-9%);
-              transform: scale(1.1) translateX(-6%) translateY(-9%); }
-    .m-introduction__img--baloon {
-      -webkit-transform: scale(1) translateX(0%) translateY(-13%);
-              transform: scale(1) translateX(0%) translateY(-13%); } }
->>>>>>> 92a50d153485420dd170e413d3af9b5f79fe8b0d
 @media (min-width: 64em) {
   .m-introduction {
     margin-top: 4.125rem;
@@ -1240,7 +1246,7 @@ h4, .as-h4, .l-article h3 {
 .m-links__banner, .m-links__payoff {
   clear: both;
   font-size: 0.875em;
-  font-style: italic; }
+  font-family: "ff-meta-serif-web-pro", georgia, serif; }
 @media (min-width: 30em) {
   .m-links .m-links__title, .m-links .m-links__payoff, .m-links .m-links__banner {
     float: left;
@@ -1331,6 +1337,7 @@ h4, .as-h4, .l-article h3 {
  }
 
 .m-navigation {
+  font-size: 0.875em;
   position: relative;
   z-index: 100;
   padding-top: 1.375rem;
@@ -1348,7 +1355,7 @@ h4, .as-h4, .l-article h3 {
       content: "/";
       padding: 1em 0;
       color: #e60002;
-      font-size: 1.625em;
+      font-size: 0.875em;
       line-height: 18px; }
   .m-navigation__link {
     display: block;
@@ -1417,19 +1424,3 @@ h4, .as-h4, .l-article h3 {
 .js-navigation-active .m-navigation {
   -webkit-transform: translateX(0%);
           transform: translateX(0%); }
-
-.m-clients__title {
-  border-bottom: 1px solid #f3f3f3; }
-.m-clients__item {
-  margin: 0.75rem 0;
-  font-weight: 600; }
-  .m-clients__item em {
-    font-weight: 400; }
-  .m-clients__item:before {
-    content: "/";
-    color: #e60002; }
-@media (min-width: 48em) {
-  .m-clients {
-    margin-top: 0 !important; }
-    .m-clients__title {
-      margin-top: 0; } }
