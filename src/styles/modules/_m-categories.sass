@@ -1,0 +1,33 @@
+.m-categories
+  border-top: 1px solid $color__grey4
+  margin-bottom: 2 * $rithm
+  font-size: $base-font-size
+
+.m-categories__containers
+  padding: $rithm
+  display: table
+  width: 8/10
+
+
+.m-categories__left
+  width: 50%
+  float: left
+  border-right: 1px solid $color__grey4
+  
+
+.m-categories__right
+  width: 50%
+  float: right
+
+.m-categories__title
+  @extend .as-h4 // non funziona, perché?
+  display: table-cell
+  vertical-align: top
+
+.m-categories__list
+  list-style: none
+  display: table-cell
+  vertical-align: top
+
+.m-categories__item
+  padding-bottom: $rithm

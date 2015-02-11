@@ -4,7 +4,7 @@
   </h2>
   <ul class="m-category__list">
   {{#each category.list}}
-    <li class="m-category__item">
+    <li class="m-category__item  {{#if active}}m-status__active{{/if}}">
       {{{label}}}
     </li>
    {{/each}}

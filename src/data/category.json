@@ -4,13 +4,15 @@
      "order": 1,
      "id": "1",
      "label": "Direzione di progetto",
-     "link": ""
+     "link": "",
+     "active": false
     },
     {
      "order": 2,
      "id": "2",
      "label": "Architettura informativa",
-     "link": ""
+     "link": "",
+     "active": true
     }
   ]
 }
