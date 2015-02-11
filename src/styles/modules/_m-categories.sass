@@ -6,21 +6,30 @@
 .m-categories__containers
   padding: $rithm
   display: table
-  width: 8/10
+  width: 8/10 //non funziona, perché?
 
 
 .m-categories__left
-  width: 50%
-  float: left
-  border-right: 1px solid $color__grey4
+  width: 100%
+  border-bottom: 1px solid $color__grey4
+  +respond-min($bp__phablet)
+    width: 50%
+    float: left
+    border-bottom: none
+    border-right: 1px solid $color__grey4
   
 
 .m-categories__right
-  width: 50%
-  float: right
+  width: 100%
+  border-bottom: 1px solid $color__grey4
+  +respond-min($bp__phablet)
+    width: 50%
+    float: right
+    border-bottom: none
+
 
 .m-categories__title
-  @extend .as-h4 // non funziona, perché?
+  @extend .as-h4
   display: table-cell
   vertical-align: top
 

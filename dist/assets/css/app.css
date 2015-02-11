@@ -613,18 +613,18 @@ input[type=checkbox], input[type=radio] {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .l-block:before, .l-article:before, .l-boxes__box:before, .m-card:before, .m-clients:before, .m-keypoint:before, .m-links__banner:before, .m-links__payoff:before, .l-block__container:before, .m-masthead__row:before, .l-boxes:before, .m-links:before, .m-masthead:before, .m-navigation__item:before, .clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
+.clearfix:before, .l-block:before, .l-article:before, .l-boxes__box:before, .m-card:before, .m-clients:before, .m-keypoint:before, .m-links__banner:before, .m-links__payoff:before, .l-block__container:before, .m-contentinfo__inner:before, .m-masthead__row:before, .l-boxes:before, .m-links:before, .m-masthead:before, .m-navigation__item:before, .clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-contentinfo__inner:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
+.clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-contentinfo__inner:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
   clear: both; }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix, .l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff, .l-block__container, .m-masthead__row, .l-boxes, .m-links, .m-masthead, .m-navigation__item {
+.clearfix, .l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff, .l-block__container, .m-contentinfo__inner, .m-masthead__row, .l-boxes, .m-links, .m-masthead, .m-navigation__item {
   *zoom: 1; }
 
 a {
@@ -865,6 +865,12 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
   .l-article p {
     margin-bottom: 1.375rem; }
 
+.l-article__title {
+  text-align: center; }
+  @media (min-width: 64em) {
+    .l-article__title {
+      text-align: left; } }
+
 @media (min-width: 40em) {
   .l-article__content {
     width: 66.6666666667%;
@@ -916,12 +922,12 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
   background-color: #f6f6f6;
   color: #FFF; }
 
-.l-block__container, .m-masthead__row {
+.l-block__container, .m-contentinfo__inner, .m-masthead__row {
   margin: 0 auto;
   width: 100%;
   max-width: 64rem; }
   @media (min-width: 90.0625em) {
-    .l-block__container, .m-masthead__row {
+    .l-block__container, .m-contentinfo__inner, .m-masthead__row {
       max-width: 72rem; } }
 
 @media (min-width: 30em) {
@@ -1199,7 +1205,8 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
 .m-contentinfo {
   background: #f6f6f6;
   text-align: center;
-  margin-bottom: 1.375rem; }
+  padding-top: 1.375rem;
+  padding-bottom: 2.75rem; }
   .m-contentinfo small {
     display: block; }
   .m-contentinfo__list {
@@ -1208,10 +1215,9 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
     margin: 0 0.5rem; }
   .m-contentinfo__link {
     color: #131313;
-    font-size: 0.875em;
-    font-weight: 700; }
+    font-size: 0.75em; }
     .m-contentinfo__link:hover, .m-contentinfo__link:active, .m-contentinfo__link:focus {
-      color: #e60002; }
+      color: #999; }
   @media (min-width: 30em) {
     .m-contentinfo__item {
       display: inline-block; }
@@ -1223,6 +1229,20 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
     .m-contentinfo__contacts {
       float: right; }
  }
+
+.m-contentinfo__inner {
+  position: relative; }
+
+.m-contentinfo__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .m-introduction__text {
   text-align: left; }
@@ -1470,13 +1490,23 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
   width: 8/10; }
 
 .m-categories__left {
-  width: 50%;
-  float: left;
-  border-right: 1px solid #999; }
+  width: 100%;
+  border-bottom: 1px solid #999; }
+  @media (min-width: 40em) {
+    .m-categories__left {
+      width: 50%;
+      float: left;
+      border-bottom: none;
+      border-right: 1px solid #999; } }
 
 .m-categories__right {
-  width: 50%;
-  float: right; }
+  width: 100%;
+  border-bottom: 1px solid #999; }
+  @media (min-width: 40em) {
+    .m-categories__right {
+      width: 50%;
+      float: right;
+      border-bottom: none; } }
 
 .m-categories__title {
   display: table-cell;

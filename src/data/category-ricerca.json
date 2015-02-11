@@ -1,0 +1,25 @@
+{
+  "list": [
+    {
+     "order": 1,
+     "id": "1",
+     "label": "Ricerche etnografiche",
+     "link": "",
+     "active": false
+    },
+    {
+     "order": 2,
+     "id": "2",
+     "label": "Sviluppo personaggi",
+     "link": "",
+     "active": false
+    },
+    {
+     "order": 3,
+     "id": "3",
+     "label": "Card sorting",
+     "link": "",
+     "active": false
+    }
+  ]
+}
