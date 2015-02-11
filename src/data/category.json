@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+     "order": 1,
+     "id": "1",
+     "label": "Direzione di progetto",
+     "link": ""
+    },
+    {
+     "order": 2,
+     "id": "2",
+     "label": "Architettura informativa",
+     "link": ""
+    }
+  ]
+}

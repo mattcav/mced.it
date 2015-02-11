@@ -5,12 +5,40 @@
 
   h2
     @extend .as-h3
+    border-bottom: 1px solid $color__grey3
+    margin-top: 2 * $rithm
 
   h3
     @extend .as-h4
 
   h4
-    @extend .as-h5
+    @extend .as-h4
 
   h5
-    @extend .as-h6
+    @extend .as-h4
+
+  p
+    margin-bottom: $rithm
+
+
+.l-article__content
+  +respond-min($bp__phablet)
+    width: percentage(8/12)
+    float: right
+  h2
+    @extend .as-h3
+    font-family: $fonts--comp
+
+  ul,li:before
+    content: "→"
+    padding-right: 0.5rem
+
+  li
+    margin-bottom: $rithm
+
+
+.l-article__aside
+  font-family: $fonts !important
+  +respond-min($bp__phablet)
+    width: percentage(3/12)
+    float: left
