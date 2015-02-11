@@ -932,11 +932,11 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
 
 @media (min-width: 30em) {
   .l-boxes {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #aaa;
     margin-bottom: 2rem; } }
 
 .l-boxes__title {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #aaa;
   margin-bottom: 2.75rem; }
 
 .l-boxes__box {
@@ -953,7 +953,7 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
       float: left;
       margin-bottom: 2.75rem;
       padding-bottom: 0;
-      border-right: 1px solid #e5e5e5; } }
+      border-right: 1px solid #aaa; } }
   @media (min-width: 48em) {
     .l-boxes__box {
       padding-left: 3.09375rem;
@@ -980,7 +980,7 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
 
 @media (min-width: 30em) {
   .l-boxes__box {
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid #aaa;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -995,6 +995,14 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
             justify-content: center; }
     .l-boxes__box:last-child {
       border-right: medium none; } }
+
+.banner__relationship {
+  font-family: "ff-meta-serif-web-pro", georgia, serif;
+  font-size: 0.875em;
+  font-style: italic;
+  text-align: center;
+  padding-top: 1.375rem;
+  color: #aaa; }
 
 .l-page__main, .l-page__side {
   margin-bottom: 1.375rem; }
@@ -1187,7 +1195,7 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
     margin-top: 0; }
 
 .m-clients__title {
-  border-bottom: 1px solid #f6f6f6; }
+  border-bottom: 1px solid #aaa; }
 .m-clients__item {
   margin: 0.75rem 0;
   font-weight: 600; }
@@ -1286,7 +1294,7 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
   display: block;
   padding: 0 0 1em; }
 .m-links__title {
-  border-bottom: 1px solid #f6f6f6; }
+  border-bottom: 1px solid #aaa; }
 .m-links__title--banner, .m-links__title--payoff {
   margin-bottom: 0 !important; }
 .m-links__banner, .m-links__payoff {
@@ -1326,7 +1334,7 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-category__title, .m-
   .m-links .m-links__title {
     position: relative;
     top: -15px;
-    border-bottom: 1px solid #f6f6f6; }
+    border-bottom: 1px solid #aaa; }
  }
 
 .m-masthead__row {

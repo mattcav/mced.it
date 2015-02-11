@@ -1,12 +1,12 @@
 .l-boxes
   @extend .clearfix
   +respond-min($bp__phone-landscape)
-    border-bottom: 1px solid $color__grey2
+    border-bottom: 1px solid $color__grey3
     margin-bottom: 2rem
 
 .l-boxes__title
   @extend .as-h3
-  border-bottom: 1px solid $color__grey2
+  border-bottom: 1px solid $color__grey3
   margin-bottom: $section-padding * 2
 
 .l-boxes__box
@@ -26,7 +26,7 @@
     float: left
     margin-bottom: $section-padding * 2
     padding-bottom: 0
-    border-right: 1px solid $color__grey2
+    border-right: 1px solid $color__grey3
 
   +respond-min($bp__tablet-portrait)
     padding-left: $section-padding * 2.25
@@ -48,7 +48,7 @@
     flex: 1 1 100%
 .l-boxes__box
   +respond-min($bp__phone-landscape)
-    border-right: 1px solid $color__grey2
+    border-right: 1px solid $color__grey3
     flex: 1
     display: flex
     align-items: center
@@ -56,6 +56,15 @@
     &:last-child
       border-right: medium none
 
+//extra
+
+.banner__relationship
+  font-family: $fonts--comp
+  font-size: em($ratio__small) 
+  font-style: italic
+  text-align: center
+  padding-top: $rithm
+  color: $color__grey3
 
 
 
