@@ -25,10 +25,8 @@
   +respond-min($bp__tablet-landscape)
     text-align: left
 
+
 .l-article__content
-  +respond-min($bp__phablet)
-    width: percentage(8/12)
-    float: right
   h2
     @extend .as-h3
     font-family: $fonts--comp
@@ -41,8 +39,20 @@
     margin-bottom: $rithm
 
 
+.l-article__main
+  +respond-min($bp__phablet)
+    width: percentage(8/12)
+    float: right
+
+
 .l-article__aside
   font-family: $fonts !important
   +respond-min($bp__phablet)
     width: percentage(3/12)
     float: left
+
+.l-article__full
+  p
+    font-size: em($ratio__medium)
+    line-height: 1.2 * $rithm
+
