@@ -775,7 +775,7 @@ h1, .as-h1 {
   margin-top: 2.75rem;
   -webkit-font-smoothing: antialiased; }
 
-h2, .as-h2, .m-persone .l-article {
+h2, .as-h2 {
   font-size: 2.625rem;
   font-weight: 700;
   line-height: 2.75rem;
@@ -1575,7 +1575,7 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
 
 .l-article__aside .m-persone__link {
   display: block;
-  border-bottom: 1px solid #aaa; }
+  border-bottom: 1px solid #e5e5e5; }
 
 .m-status__active {
   color: #aaa; }
