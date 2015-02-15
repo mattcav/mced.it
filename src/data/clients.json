@@ -5,14 +5,14 @@
      "id": "1",
      "label": "Almaviva",
      "link": "",
-     "desc": "",
+     "desc": ""
     },
     {
      "order": 2,
      "id": "2",
      "label": "Cresense <em>per Microsoft</em>",
      "link": "",
-     "desc": "",
+     "desc": ""
     },
     {
      "order": 3,
@@ -33,7 +33,7 @@
      "id": "5",
      "label": "Kibernetes",
      "link": "",
-     "desc": "",
+     "desc": ""
     },
     {
      "order": 6,
@@ -75,7 +75,7 @@
      "id": "11",
      "label": "InfoCamere",
      "link": "",
-     "desc": "Usabilità dei testi per depliant informativo del Registro Imprese (PDF 311 Kb). <br> Progettazione editoriale e grafica della Guida alla Compilazione della Comunicazione Unica d'Impresa (pagine di esempio PDF 1,21Mb). La guida completa è disponibile sul sito web del Registro Imprese.",
+     "desc": "Usabilità dei testi per depliant informativo del Registro Imprese (PDF 311 Kb). <br> Progettazione editoriale e grafica della Guida alla Compilazione della Comunicazione Unica d'Impresa (pagine di esempio PDF 1,21Mb). La guida completa è disponibile sul sito web del Registro Imprese."
     }
   ]
 }
