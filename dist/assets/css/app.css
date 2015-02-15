@@ -702,6 +702,7 @@ iframe {
   display: block; }
 
 blockquote {
+  font-style: italic;
   color: #aaa; }
 
 address {
@@ -1573,9 +1574,11 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
 .m-persone__link {
   font-weight: 700; }
 
+.l-article__aside .m-persone__title {
+  margin-top: 0; }
 .l-article__aside .m-persone__link {
   display: block;
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid #e5e5e5; }
 
 .m-status__active {
   color: #aaa; }
