@@ -5,87 +5,77 @@
      "id": "1",
      "label": "Almaviva",
      "link": "",
-     "desc": "blabla",
-     "in-home": true,
-     "in-page": true
+     "desc": "",
     },
     {
      "order": 2,
      "id": "2",
      "label": "Cresense <em>per Microsoft</em>",
-     "link": ""
+     "link": "",
+     "desc": "",
     },
     {
      "order": 3,
      "id": "3",
-     "label": "Client2",
-     "link": ""
+     "label": "Credem",
+     "link": "",
+     "desc": "Attività di ricerca (test di usabilità e focus group) e progettazione (funzionalità, architettura informativa, wireframe e interfaccia grafica) per lo sviluppo dell'internet banking privati e aziende di CREDEM.<br>Attività di ricerca (co-design e test di usabilità) per la definizione delle linee guida finalizzate allo sviluppo delle nuove applicazioni per dispositivi mobili.<br>Attività di ricerca (interviste e focus group) per lo sviluppo di prodotti finanziari."
     },
     {
      "order": 4,
      "id": "4",
-     "label": "Credem",
-     "link": ""
+     "label": "Università Cattolica del Sacro Cuore",
+     "link": "",
+     "desc": "Attività di ricerca (test di usabilità quali/quantitativi) per il confronto tra l'attuale portale di ateneo vs prototipo nuovo portale di ateneo."
     },
     {
      "order": 5,
      "id": "5",
-     "label": "Università Cattolica del Sacro Cuore",
-     "link": ""
+     "label": "Kibernetes",
+     "link": "",
+     "desc": "",
     },
     {
      "order": 6,
      "id": "6",
-     "label": "Kibernetes",
-     "link": ""
+     "label": "Amberlight <em>per Vodafone</em>",
+     "link": "",
+     "desc:":"Indagine quantitativa (interviste CATI) per la raccolta di informazioni sull'esperienza di utilizzo dei device mobili subito dopo l'acquisto."
     },
     {
      "order": 7,
      "id": "7",
-     "label": "Università Cattolica del Sacro Cuore",
-     "link": ""
+     "label": "Twice Reply <em>per Ferrari</em>",
+     "link": "",
+     "desc": "Attività di ricerca (interviste, focus group e test di usabilità) e progettazione (funzionalità, architettura informativa e wireframe) per lo sviluppo della intranet Ferrari."
     },
     {
      "order": 8,
      "id": "8",
-     "label": "Amberlight <em>per Vodafone</em>",
-     "link": ""
+     "label": "Adria Lab <em>per Fresenius Medical Care</em>",
+     "link": "",
+     "desc": "Ricerche etnografiche in Italia, Portogallo, Repubblica Ceca, Polonia e Romania e test di usabilità per il redesign del software EuCliD (gestione delle cartelle cliniche dei pazienti dialitici)."
     },
     {
      "order": 9,
      "id": "9",
-     "label": "Twice Reply <em>per Ferrari</em>",
-     "link": ""
+     "label": "Bitmama <em>per Magneti Marelli</em>",
+     "link": "",
+     "desc": "Progettazione dell'architettura informativa e sviluppo wireframe."
     },
     {
      "order": 10,
      "id": "10",
-     "label": "Università Cattolica del Sacro Cuore",
-     "link": ""
+     "label": "Whitehall Reply <em>per ICCD</em>",
+     "link": "",
+     "desc": "Progettazione dell'architettura informativa e direzione progetto di interfacce per applicazioni e portali web di clienti istituzionali, tra i quali l'Istituto Centrale per il Catalogo e la Documentazione (ICCD)."
     },
     {
      "order": 11,
      "id": "11",
-     "label": "Adria Lab <em>per Fresenius Medical Care</em>",
-     "link": ""
-    },
-    {
-     "order": 12,
-     "id": "12",
-     "label": "Bitmama <em>per Magneti Marelli</em>",
-     "link": ""
-    },
-    {
-     "order": 13,
-     "id": "13",
-     "label": "Whitehall Reply <em>per ICCD</em>",
-     "link": ""
-    },
-    {
-     "order": 14,
-     "id": "14",
      "label": "InfoCamere",
-     "link": ""
+     "link": "",
+     "desc": "Usabilità dei testi per depliant informativo del Registro Imprese (PDF 311 Kb). <br> Progettazione editoriale e grafica della Guida alla Compilazione della Comunicazione Unica d'Impresa (pagine di esempio PDF 1,21Mb). La guida completa è disponibile sul sito web del Registro Imprese.",
     }
   ]
 }
