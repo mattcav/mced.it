@@ -2,7 +2,7 @@
   <ul class="m-persone__list">
     {{#each tags}}
       {{#is tag "persone"}}
-        {{#each pages}}
+        {{#withSort pages data.order}}
           {{#isnt data.title page.title}}
             <li class="m-persone__item">
               <a class="m-persone__link" href="{{relative ./this.dest }}">
@@ -13,8 +13,7 @@
               </p>
             </li>
           {{/isnt}}
-
-        {{/each}}
+        {{/withSort}}
       {{/is}}
     {{/each}}
   </ul>
