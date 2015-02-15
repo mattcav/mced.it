@@ -41,7 +41,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-  -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%
   /* 2 */ }
 
 /**
@@ -190,7 +190,7 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-  padding: 0;
+  padding: 0
   /* 2 */ }
 
 /**
@@ -203,7 +203,7 @@ button, input, select, textarea {
   /* 1 */
   font-size: 100%;
   /* 2 */
-  margin: 0;
+  margin: 0
   /* 3 */ }
 
 /**
@@ -232,7 +232,7 @@ button, select {
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-  cursor: pointer;
+  cursor: pointer
   /* 3 */ }
 
 /**
@@ -248,7 +248,7 @@ button[disabled], html input[disabled] {
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0;
+  padding: 0
   /* 2 */ }
 
 /**
@@ -283,7 +283,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 textarea {
   overflow: auto;
   /* 1 */
-  vertical-align: top;
+  vertical-align: top
   /* 2 */ }
 
 /* ==========================================================================
@@ -1572,6 +1572,10 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
 
 .m-persone__link {
   font-weight: 700; }
+
+.l-article__aside .m-persone__link {
+  display: block;
+  border-bottom: 1px solid; }
 
 .m-status__active {
   color: #aaa; }

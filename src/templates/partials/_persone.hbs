@@ -2,17 +2,15 @@
   <ul class="m-persone__list">
     {{#each tags}}
       {{#is tag "persone"}}
-        {{#withSort pages data.order}}
-          {{#isnt data.title page.title}}
+        {{#withSort pages "data.order"}}
             <li class="m-persone__item">
-              <a class="m-persone__link" href="{{relative ./this.dest }}">
-                {{data.title}} {{data.dest}}
+              <a class="m-persone__link" href="{{relative ./page.dest this.dest}}">
+                {{data.title}} {{page.dest this.dest}}
               </a>
               <p class="m-persone__desc">
                 {{data.desc}}
               </p>
             </li>
-          {{/isnt}}
         {{/withSort}}
       {{/is}}
     {{/each}}
