@@ -122,6 +122,25 @@ module.exports = function(grunt) {
         files: {
           '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
         }
+      },
+
+      services: {
+        options: {
+          flatten: true,
+          assets: '<%= config.dist %>/assets',
+          layout: '<%= config.src %>/templates/layouts/longread.hbs',
+          data: '<%= config.src %>/data/*.{json,yml}',
+          partials: '<%= config.src %>/templates/partials/*.hbs'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.src %>/templates/pages/ricerca',
+            src: ['*.hbs'],
+            dest: '<%= config.dist %>/',
+            ext: '.html'
+          }
+        ]
       }
     },
 
