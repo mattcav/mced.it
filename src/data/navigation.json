@@ -4,31 +4,31 @@
      "order": 1,
      "id": "1",
      "label": "Chi siamo",
-     "link": "http://www.usertestlab.it/interna.asp?p=1"
+     "link": "./chi-siamo.html"
     },
     {
      "order": 2,
      "id": "2",
      "label": "Clienti e progetti",
-     "link": "http://www.usertestlab.it/interna.asp?p=2"
+     "link": "./clienti-progetti.html"
     },
     {
      "order": 3,
      "id": "3",
      "label": "Contatti e preventivi",
-     "link": "http://www.usertestlab.it/interna.asp?p=3"
+     "link": "./contatti-preventivi.html"
     },
     {
      "order": 4,
      "id": "4",
      "label": "Rassegna stampa",
-     "link": "http://www.usertestlab.it/interna.asp?p=4"
+     "link": "./rassegna-stampa.html"
     },
     {
      "order": 5,
      "id": "5",
      "label": "Laboratorio per test di usabilità e focus group",
-     "link": "http://www.usertestlab.it/interna.asp?p=32"
+     "link": "./laboratorio-per-test-di-usabilita-e-focus-group.html"
     }
   ]
 }

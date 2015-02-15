@@ -4,7 +4,10 @@
      "order": 1,
      "id": "1",
      "label": "Almaviva",
-     "link": ""
+     "link": "",
+     "desc": "blabla",
+     "in-home": true,
+     "in-page": true
     },
     {
      "order": 2,
