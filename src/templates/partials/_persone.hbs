@@ -1,0 +1,18 @@
+<section class="m-persone">
+  <ul class="m-persone__list">
+    {{#each tags}}
+      {{#is tag "persone"}}
+        {{#each pages}}
+          <li class="m-persone__item">
+            <a class="m-persone__link" href="{{relative  .. /page.dest this.dest }}">
+              {{data.title}}
+            </a>
+            <p class="m-persone__desc">
+              {{data.desc}}
+            </p>
+          </li>
+        {{/each}}
+      {{/is}}
+    {{/each}}
+  </ul>
+</section>

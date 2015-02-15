@@ -1,5 +1,7 @@
 ---
 title: Stefano Dominici
+tags: persone
+desc: user experience designer usability specialist e information architect
 ---
 <article class="l-page l-article">
   <h1 class="as-h2 l-article__title">
@@ -9,13 +11,6 @@ title: Stefano Dominici
     {{md './src/content/stefano-dominici.md' }}
   </div>
   <aside class="l-article__aside m-article__category">
-    <ul class="m-people__list">
-      {{#each people.list}}
-      <li class="m-people__person">
-        <p class="m-people__name">{{{label}}}</p>
-        <p class="m-people__pro">{{{title}}}</p>
-      </li>
-      {{/each}}
-    </ul>
+    {{> _persone }}
   </aside>
 </article>
