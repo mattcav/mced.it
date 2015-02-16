@@ -20,16 +20,24 @@
         <h1 class="as-h2 l-article__title">
           {{title}}
         </h1>
-        <div class="l-article__main l-article__content">
+        <div class="l-article__main l-article__main--service l-article__content">
           {{#markdown}}
             {{> body }}
           {{/markdown}}
         </div>
-        <aside class="l-article__aside">
-          {{> _category}}
+        <aside class="l-article__aside l-article__aside--related">
+          {{#is page.section "ricerca"}}
+            {{> _category-ricerca}}
+          {{/is}}
+          {{#is page.section "progettazione"}}
+            {{> _category-progettazione}}
+          {{/is}}
+          {{#is page.section "valutazione"}}
+            {{> _category-valutazione}}
+          {{/is}}
         </aside>
       </article>
-      <section class="m-categories clearfix">
+      <section class="l-related clearfix">
         {{> _categories}}
       </section>
     </main>

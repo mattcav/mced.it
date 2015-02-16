@@ -5,7 +5,7 @@
     {
      "order": 1,
      "id": "1",
-     "title": "usertet/lab al World Usability Day 2014",
+     "title": "Usertest/lab al World Usability Day 2014",
      "link": "http://www.progettareperlepersone.it/dblog/articolo.asp?articolo=178"
     },
     {
@@ -19,6 +19,12 @@
      "id": "3",
      "title": "La ricerca con le persone. Workshop per il Roma UXBookClub",
      "link": "http://www.progettareperlepersone.it/dblog/articolo.asp?articolo=175"
+    },
+    {
+     "order": 4,
+     "id": "4",
+     "title": "Accendere la TV con un gesto? I cinesi lo fanno  \"strano\"",
+     "link": "http://www.progettareperlepersone.it/dblog/articolo.asp?articolo=174"
     }
   ]
 }

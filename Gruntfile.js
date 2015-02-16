@@ -70,7 +70,7 @@ module.exports = function(grunt) {
     watch: {
       assemble: {
         files: ['<%= config.src %>/{content,data,templates}/{layouts,pages,partials}/{,*/}*.{md,hbs,yml}'],
-        tasks: ['newer:assemble']
+        tasks: ['assemble']
       },
       sass: {
         files: '<%= config.src %>/styles/{,*/}*.sass',
@@ -113,35 +113,77 @@ module.exports = function(grunt) {
     assemble: {
       pages: {
         options: {
+          collections: [{name: 'services'}],
           flatten: true,
           assets: '<%= config.dist %>/assets',
           layout: '<%= config.src %>/templates/layouts/default.hbs',
           data: '<%= config.src %>/data/*.{json,yml}',
           partials: '<%= config.src %>/templates/partials/*.hbs'
         },
-        files: {
-          '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
-        }
-      },
-
-      services: {
-        options: {
-          flatten: true,
-          assets: '<%= config.dist %>/assets',
-          layout: '<%= config.src %>/templates/layouts/longread.hbs',
-          data: '<%= config.src %>/data/*.{json,yml}',
-          partials: '<%= config.src %>/templates/partials/*.hbs'
-        },
         files: [
+          {
+            '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
+          },
           {
             expand: true,
             cwd: '<%= config.src %>/templates/pages/ricerca',
             src: ['*.hbs'],
             dest: '<%= config.dist %>/',
             ext: '.html'
+          },
+          {
+            expand: true,
+            cwd: '<%= config.src %>/templates/pages/progettazione',
+            src: ['*.hbs'],
+            dest: '<%= config.dist %>/',
+            ext: '.html'
+          },
+          {
+            expand: true,
+            cwd: '<%= config.src %>/templates/pages/valutazione',
+            src: ['*.hbs'],
+            dest: '<%= config.dist %>/',
+            ext: '.html'
           }
         ]
-      }
+      },
+
+      // services: {
+      //   options: {
+      //     collections: [{name: 'services'}],
+      //     flatten: true,
+      //     assets: '<%= config.dist %>/assets',
+      //     layout: '<%= config.src %>/templates/layouts/longread.hbs',
+      //     data: '<%= config.src %>/data/*.{json,yml}',
+      //     partials: '<%= config.src %>/templates/partials/*.hbs'
+      //   },
+      //   files: [
+      //     {
+      //       '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
+      //     },
+      //     {
+      //       expand: true,
+      //       cwd: '<%= config.src %>/templates/pages/ricerca',
+      //       src: ['*.hbs'],
+      //       dest: '<%= config.dist %>/',
+      //       ext: '.html'
+      //     },
+      //     {
+      //       expand: true,
+      //       cwd: '<%= config.src %>/templates/pages/progettazione',
+      //       src: ['*.hbs'],
+      //       dest: '<%= config.dist %>/',
+      //       ext: '.html'
+      //     },
+      //     {
+      //       expand: true,
+      //       cwd: '<%= config.src %>/templates/pages/valutazione',
+      //       src: ['*.hbs'],
+      //       dest: '<%= config.dist %>/',
+      //       ext: '.html'
+      //     }
+      //   ]
+      // }
     },
 
     // Before generating any new files,

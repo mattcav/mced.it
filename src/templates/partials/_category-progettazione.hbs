@@ -1,0 +1,23 @@
+<section class="m-category">
+  <h2 class="m-category__title">
+    progettazione
+  </h2>
+  <ul class="m-category__list">
+  {{#each pages}}
+    {{#is data.section "progettazione"}}
+      {{#is ../../page.dest this.dest}}
+        <li class="m-category__item m-status__active">
+            {{data.title}}
+        </li>
+      {{else}}
+        <li class="m-category__item">
+          <a href="./{{basename}}.html">
+            {{data.title}}
+          </a>
+        </li>
+      {{/is}}
+    {{/is}}
+  {{/each}}
+  </ul>
+</section>
+

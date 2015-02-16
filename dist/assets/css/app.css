@@ -41,7 +41,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-  -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%
   /* 2 */ }
 
 /**
@@ -190,7 +190,7 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-  padding: 0;
+  padding: 0
   /* 2 */ }
 
 /**
@@ -203,7 +203,7 @@ button, input, select, textarea {
   /* 1 */
   font-size: 100%;
   /* 2 */
-  margin: 0;
+  margin: 0
   /* 3 */ }
 
 /**
@@ -232,7 +232,7 @@ button, select {
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-  cursor: pointer;
+  cursor: pointer
   /* 3 */ }
 
 /**
@@ -248,7 +248,7 @@ button[disabled], html input[disabled] {
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0;
+  padding: 0
   /* 2 */ }
 
 /**
@@ -283,7 +283,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 textarea {
   overflow: auto;
   /* 1 */
-  vertical-align: top;
+  vertical-align: top
   /* 2 */ }
 
 /* ==========================================================================
@@ -613,18 +613,18 @@ input[type=checkbox], input[type=radio] {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .l-block:before, .l-article:before, .l-boxes__box:before, .m-card:before, .m-clients:before, .m-keypoint:before, .m-links__banner:before, .m-links__payoff:before, .l-block__container:before, .m-contentinfo__inner:before, .m-masthead__row:before, .l-boxes:before, .m-links:before, .m-masthead:before, .m-navigation__item:before, .clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-contentinfo__inner:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
+.clearfix:before, .l-block:before, .l-article:before, .l-boxes__box:before, .l-related .m-category:before, .m-card:before, .m-clients:before, .m-keypoint:before, .m-links__banner:before, .m-links__payoff:before, .l-block__container:before, .m-contentinfo__inner:before, .m-masthead__row:before, .l-boxes:before, .m-links:before, .m-masthead:before, .m-navigation__item:before, .clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .l-related .m-category:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-contentinfo__inner:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-contentinfo__inner:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
+.clearfix:after, .l-block:after, .l-article:after, .l-boxes__box:after, .l-related .m-category:after, .m-card:after, .m-clients:after, .m-keypoint:after, .m-links__banner:after, .m-links__payoff:after, .l-block__container:after, .m-contentinfo__inner:after, .m-masthead__row:after, .l-boxes:after, .m-links:after, .m-masthead:after, .m-navigation__item:after {
   clear: both; }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix, .l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff, .l-block__container, .m-contentinfo__inner, .m-masthead__row, .l-boxes, .m-links, .m-masthead, .m-navigation__item {
+.clearfix, .l-block, .l-article, .l-boxes__box, .l-related .m-category, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff, .l-block__container, .m-contentinfo__inner, .m-masthead__row, .l-boxes, .m-links, .m-masthead, .m-navigation__item {
   *zoom: 1; }
 
 a {
@@ -883,28 +883,41 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
 @media (min-width: 40em) {
   .l-article__main {
     width: 66.6666666667%;
+    float: left; } }
+
+@media (min-width: 40em) {
+  .l-article__main--service {
     float: right; } }
 
 .l-article__aside {
   font-family: "ff-meta-web-pro", Helvetica, sans-serif !important; }
+  .l-article__aside h2 {
+    margin-top: 0; }
   @media (min-width: 40em) {
     .l-article__aside {
       width: 25%;
-      float: left; } }
+      float: right; } }
+  .l-article__aside .m-category {
+    margin-bottom: 1.375rem; }
+
+.l-article__aside--related {
+  float: left; }
+  .l-article__aside--related h2 {
+    margin-top: 2.75rem; }
 
 .l-article__full p {
   font-size: 1.125em;
   line-height: 1.65rem; }
 
-.l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
+.l-block, .l-article, .l-boxes__box, .l-related .m-category, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
   padding-left: 1.375rem;
   padding-right: 1.375rem; }
   @media (min-width: 30em) {
-    .l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
+    .l-block, .l-article, .l-boxes__box, .l-related .m-category, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
       padding-left: 1.71875rem;
       padding-right: 1.71875rem; } }
   @media (min-width: 90.0625em) {
-    .l-block, .l-article, .l-boxes__box, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
+    .l-block, .l-article, .l-boxes__box, .l-related .m-category, .m-card, .m-clients, .m-keypoint, .m-links__banner, .m-links__payoff {
       padding-left: 2.0625rem;
       padding-right: 2.0625rem; } }
 
@@ -1084,6 +1097,44 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
   visibility: hidden;
   opacity: 0; }
 
+.l-related {
+  border-top: 1px solid #999;
+  margin-bottom: 2.75rem;
+  font-size: 1rem; }
+  .l-related .m-category {
+    padding: 1.375rem;
+    border-bottom: 1px solid #999; }
+    @media (min-width: 40em) {
+      .l-related .m-category {
+        width: 50%;
+        float: left;
+        border-bottom: none;
+        border-right: 1px solid #999; }
+        .l-related .m-category:last-child {
+          border-right: none; } }
+  .l-related .m-category__title {
+    margin-top: 0;
+    float: left;
+    width: 33%; }
+  .l-related .m-category__list {
+    float: right;
+    width: 66%; }
+    @media (min-width: 80em) {
+      .l-related .m-category__list {
+        width: 50%; } }
+
+.m-categories__title {
+  display: table-cell;
+  vertical-align: top; }
+
+.m-categories__list {
+  list-style: none;
+  display: table-cell;
+  vertical-align: top; }
+
+.m-categories__item {
+  padding-bottom: 1.375rem; }
+
 .l-valign {
   display: table;
   margin: 0 auto;
@@ -1192,12 +1243,6 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
 .o-logo {
   max-width: 15rem; }
 
-.m-article__people {
-  float: left; }
-
-.m-article__category {
-  float: right; }
-
 .m-card {
   text-align: center;
   background: #f6f6f6; }
@@ -1206,46 +1251,8 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
   .m-card__title {
     margin-top: 0; }
 
-.m-categories {
-  border-top: 1px solid #999;
-  margin-bottom: 2.75rem;
-  font-size: 1rem; }
-
-.m-categories__containers {
-  padding: 1.375rem;
-  display: table;
-  width: 8/10; }
-
-.m-categories__left {
-  width: 100%;
-  border-bottom: 1px solid #999; }
-  @media (min-width: 40em) {
-    .m-categories__left {
-      width: 50%;
-      float: left;
-      border-bottom: none;
-      border-right: 1px solid #999; } }
-
-.m-categories__right {
-  width: 100%;
-  border-bottom: 1px solid #999; }
-  @media (min-width: 40em) {
-    .m-categories__right {
-      width: 50%;
-      float: right;
-      border-bottom: none; } }
-
-.m-categories__title {
-  display: table-cell;
-  vertical-align: top; }
-
-.m-categories__list {
-  list-style: none;
-  display: table-cell;
-  vertical-align: top; }
-
-.m-categories__item {
-  padding-bottom: 1.375rem; }
+.m-category__title {
+  text-transform: capitalize; }
 
 .m-category__list {
   list-style: none; }
@@ -1256,8 +1263,12 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
 .m-clients__title {
   border-bottom: 1px solid #aaa; }
 .m-clients__item {
+  display: inline-block;
   margin: 1.375rem 0;
   font-weight: 600; }
+  @media (min-width: 48em) {
+    .m-clients__item {
+      display: block; } }
   .m-clients__item em {
     font-weight: 400; }
   .m-clients__item:before {
@@ -1574,8 +1585,6 @@ h4, .as-h4, .l-article h3, .l-article h4, .l-article h5, .m-categories__title, .
 .m-persone__link {
   font-weight: 700; }
 
-.l-article__aside .m-persone__title {
-  margin-top: 0; }
 .l-article__aside .m-persone__link {
   display: block;
   border-bottom: 1px solid #e5e5e5; }

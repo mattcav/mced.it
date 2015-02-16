@@ -1,20 +1,11 @@
-<article class="m-categories__left m-categories__containers">
-  <h1 class="m-categories__title">Ricerca</h1>
-   <ul class="m-categories__list">
-  {{#each category-ricerca.list}}
-    <li class="m-categories__item">
-      {{{label}}}
-    </li>
-   {{/each}}
-  </ul>
-</article>
-<article class="m-categories__right m-categories__containers">
-  <h1 class="m-categories__title">Valutazione</h1>
-  <ul class="m-categories__list">
-  {{#each category-valutazione.list}}
-    <li class="m-categories__item">
-      {{{label}}}
-    </li>
-   {{/each}}
-  </ul>
-</article>
+{{#isnt page.section "ricerca"}}
+  {{> _category-ricerca}}
+{{/isnt}}
+
+{{#isnt page.section "valutazione"}}
+  {{> _category-valutazione}}
+{{/isnt}}
+
+{{#isnt page.section "progettazione"}}
+  {{> _category-progettazione}}
+{{/isnt}}
