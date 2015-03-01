@@ -1280,7 +1280,7 @@ h4, .as-h4, .m-categories__title {
 @media (min-width: 43.75em) {
   .m-tickets__form {
     min-height: 32rem;
-    background-image: url('../images/whiterabbit.jpg');
+    background-image: url('../images/mad.jpg');
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem) calc(100% - 1rem);
     background-size: auto 26rem; } }
