@@ -1,8 +1,6 @@
 // Color Variables
-$color__green: #acbf27
-$color__red: #e60002
-
-$color__black: #131313
+$color__red: #e40026
+$color__black: #222222
 $color__white: #FFF
 
 $color__grey1: #f6f6f6
@@ -11,17 +9,10 @@ $color__grey3: #aaa
 $color__grey4: #999
 $color__grey5: #222
 
-$palette-red: (
-  "primary": #e40026; //main color for bg
-  "secondary": #222222 //button color
-  "text": #ffffff //color text on primary
-  )
-
-
-$color__primary: $color__red
+$color__primary: $color__black
 $color__primary--light: darken($color__primary, 10%)
-$color__secondary: $color__green
-$color__secondary--light: lighten($color__green, 20%)
+$color__secondary: $color__red
+$color__secondary--light: lighten($color__secondary, 20%)
 
 // Variations on saturated background
 $color__primary--on-color: #F03B50
@@ -33,8 +24,8 @@ $color__white--transparent: rgba($color__white, .75)
 $color__black--transparent: rgba($color__black, .75)
 $color__grey1--transparent: rgba($color__grey1, .5)
 
-$color__background: $color__white
-$color__text: $color__black
+$color__background: $color__red
+$color__text: $color__white
 $color__border: $color__grey2
 
 $color__link: $color__primary
