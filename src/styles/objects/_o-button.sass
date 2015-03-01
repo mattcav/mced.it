@@ -29,9 +29,11 @@
   color: $color__white
   max-width: $narrow-col
   transition: background-color $transition__duration, color $transition__duration
+  &:visited
+    color: $color__white
   +on-interaction
     background-color: $color__white
-    color: $color__black
+    color: $color__black !important
 
 .o-button--small
   font-size: em($ratio__small)

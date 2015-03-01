@@ -352,29 +352,29 @@ table {
 
 @-webkit-keyframes change-bgcolor {
   0% {
-    background-color: #046c97; }
+    background-color: #37a5d4; }
 
   25% {
-    background-color: #430142; }
-
-  50% {
     background-color: #e40026; }
 
+  50% {
+    background-color: #37d485; }
+
   75% {
-    background-color: #222222; } }
+    background-color: #d4d437; } }
 
 @keyframes change-bgcolor {
   0% {
-    background-color: #046c97; }
+    background-color: #37a5d4; }
 
   25% {
-    background-color: #430142; }
-
-  50% {
     background-color: #e40026; }
 
+  50% {
+    background-color: #37d485; }
+
   75% {
-    background-color: #222222; } }
+    background-color: #d4d437; } }
 
 input, textarea, select {
   box-sizing: border-box;
@@ -569,7 +569,7 @@ input[type=checkbox], input[type=radio] {
   color: #aaa; }
 
 .text--primary {
-  color: #046c97; }
+  color: #37a5d4; }
 
 .text--centered {
   text-align: center; }
@@ -679,15 +679,15 @@ a {
   background-repeat: repeat-x;
   background-size: auto 2px;
   background-position: 0 18px;
-  color: #046c97; }
+  color: #37a5d4; }
   a:visited {
-    color: #046c97; }
+    color: #37a5d4; }
   a:focus {
-    color: #034865; }
+    color: #2688b2; }
   a:hover {
-    color: #034865; }
+    color: #2688b2; }
   a:active {
-    color: #034865; }
+    color: #2688b2; }
 
 .link, [class^="link--"]:before, [class*=" link--"] {
   transition: color 0.125s;
@@ -746,11 +746,11 @@ hr, .hr {
 
 ::-moz-selection {
   color: #FFF;
-  background-color: #046c97; }
+  background-color: #37a5d4; }
 
 ::selection {
   color: #FFF;
-  background-color: #046c97; }
+  background-color: #37a5d4; }
 
 table {
   width: 100%; }
@@ -862,7 +862,7 @@ h4, .as-h4, .m-categories__title {
   color: #aaa; }
 
 .color--red {
-  color: #046c97; }
+  color: #37a5d4; }
   .l-section--color .color--red {
     color: #f6f6f6; }
 
@@ -1101,9 +1101,11 @@ h4, .as-h4, .m-categories__title {
   color: #FFF;
   max-width: 25rem;
   transition: background-color 0.125s, color 0.125s; }
+  .o-button:visited, .m-teaser__button:visited {
+    color: #FFF; }
   .o-button:hover, .m-teaser__button:hover, .o-button:active, .m-teaser__button:active, .o-button:focus, .m-teaser__button:focus {
     background-color: #FFF;
-    color: #222222; }
+    color: #222222 !important; }
 
 .o-button--small {
   font-size: 0.875em; }
@@ -1183,7 +1185,7 @@ h4, .as-h4, .m-categories__title {
           animation-delay: 2000ms; }
 
 .m-home {
-  background-color: #046c97; }
+  background-color: #37a5d4; }
   .m-home body {
     color: #FFF; }
 
