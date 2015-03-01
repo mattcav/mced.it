@@ -332,6 +332,50 @@ table {
     -webkit-transform: translateX(0%);
             transform: translateX(0%); } }
 
+.m-home {
+  -webkit-animation-name: change-bgcolor;
+          animation-name: change-bgcolor;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes change-bgcolor {
+  0% {
+    background-color: #37a5d4; }
+
+  25% {
+    background-color: #e40026; }
+
+  50% {
+    background-color: #37d485; }
+
+  75% {
+    background-color: #d4d437; } }
+
+@keyframes change-bgcolor {
+  0% {
+    background-color: #37a5d4; }
+
+  25% {
+    background-color: #e40026; }
+
+  50% {
+    background-color: #37d485; }
+
+  75% {
+    background-color: #d4d437; } }
+
 input, textarea, select {
   box-sizing: border-box;
   width: 100%;
@@ -753,7 +797,7 @@ h2, .as-h2 {
   margin-bottom: 0.590909091em;
   margin-top: 1.181818182em; }
 
-h3, .as-h3, .l-boxes__title, .m-banner__title {
+h3, .as-h3, .l-boxes__title, .m-banner__title, .m-tickets__title {
   font-size: 1.6875em;
   line-height: 1.925925926em;
   margin-bottom: 0.962962963em;
@@ -1053,14 +1097,15 @@ h4, .as-h4, .m-categories__title {
   text-align: center;
   line-height: 2.5em;
   border-radius: 2px;
-  border: 2px solid #37a5d4;
   background: #222222;
   color: #FFF;
   max-width: 25rem;
   transition: background-color 0.125s, color 0.125s; }
+  .o-button:visited, .m-teaser__button:visited {
+    color: #FFF; }
   .o-button:hover, .m-teaser__button:hover, .o-button:active, .m-teaser__button:active, .o-button:focus, .m-teaser__button:focus {
     background-color: #FFF;
-    color: #222222; }
+    color: #222222 !important; }
 
 .o-button--small {
   font-size: 0.875em; }
@@ -1203,6 +1248,9 @@ h4, .as-h4, .m-categories__title {
     padding: 1.625em;
     background-color: #FFF;
     color: #222222; }
+  .m-tickets__title {
+    font-style: italic;
+    line-height: 1.2; }
   .m-tickets__form iframe {
     margin: 0 auto;
     float: none; }
