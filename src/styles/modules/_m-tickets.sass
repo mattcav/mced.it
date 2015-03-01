@@ -2,12 +2,13 @@
   @extend .margin-top-double
 
   &__inner
-    padding: $section-padding
-    background-color: $color__white
+    @extend .padding-double
     color: $color__black
+    background-color: $color__white
 
   &__header
     @extend .l-block
+
   &__title
     @extend .as-h3
     font-style: italic
@@ -15,7 +16,15 @@
 
   &__form
     @extend .l-block--container
+    +respond-min($bp__tablet-landscape)
+      background:
+        image: url('../images/whiterabbit.jpg')
+        repeat: no-repeat
+        position: calc(100% - 1rem) 100%
+        size: contain
 
     iframe
-      margin: 0 auto
-      float: none
+      @extend .l-block
+      width: 100%
+      max-width: $regular-col
+
