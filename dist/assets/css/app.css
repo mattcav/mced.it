@@ -1265,3 +1265,12 @@ h4, .as-h4, .m-categories__title {
 .m-tickets__form iframe {
   width: 100%;
   max-width: 44rem; }
+
+.m-social {
+  background: #FFF;
+  color: #222222;
+  text-align: center; }
+  .m-social span {
+    display: inline-block;
+    max-width: 170px;
+    margin-right: 1rem; }
