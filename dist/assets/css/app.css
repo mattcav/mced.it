@@ -718,7 +718,7 @@ td {
   vertical-align: top; }
 
 body {
-  font: normal 1rem/1.375rem "lust", Helvetica, sans-serif;
+  font: normal 1rem/1.375rem "ff-meta-serif-web-pro", georgia, serif;
   color: #FFF;
   -webkit-font-smoothing: antialiased; }
   @media (min-width: 90.0625em) {
@@ -736,7 +736,7 @@ blockquote > :last-child, ol > :last-child, dl > :last-child, fieldset > :last-c
 abbr[title] {
   border-bottom: none; }
 
-.script, .m-teaser .m-teaser__when, .m-teaser .m-teaser__where {
+.script {
   font-family: "lust-script-display", georgia, serif; }
 
 h1, .as-h1 {
@@ -753,7 +753,7 @@ h2, .as-h2 {
   margin-bottom: 0.590909091em;
   margin-top: 1.181818182em; }
 
-h3, .as-h3, .l-boxes__title, .m-banner__title, .m-teaser .m-teaser__when, .m-teaser .m-teaser__where {
+h3, .as-h3, .l-boxes__title, .m-banner__title {
   font-size: 1.6875em;
   line-height: 1.925925926em;
   margin-bottom: 0.962962963em;
@@ -798,14 +798,9 @@ h4, .as-h4, .m-categories__title {
     .large-copy {
       line-height: 1.8; } }
 
-.uppercase, .m-teaser__intro {
-  font-size: 1em;
+.uppercase {
   text-transform: uppercase;
-  letter-spacing: .0625em;
-  font-weight: 900; }
-  @media (min-width: 90.0625em) {
-    .uppercase, .m-teaser__intro {
-      font-size: 1.5em; } }
+  letter-spacing: .0625em; }
 
 .weight--black {
   font-weight: 900; }
@@ -1164,7 +1159,9 @@ h4, .as-h4, .m-categories__title {
     display: block;
     background-color: #222222;
     color: #FFF;
-    text-align: center; }
+    text-align: center;
+    font-style: italic;
+    line-height: 1.6; }
   .m-banner__title {
     margin-top: 11rem; }
     .m-banner__title .o-title {
@@ -1175,8 +1172,30 @@ h4, .as-h4, .m-categories__title {
 
 .m-teaser {
   text-align: center; }
-  .m-teaser .m-teaser__when, .m-teaser .m-teaser__where {
-    line-height: 1.2; }
+  .m-teaser__when {
+    font-family: "lust-script-display", georgia, serif;
+    line-height: 1.2;
+    font-size: 1.125em;
+    margin-bottom: .5em; }
+    @media (min-width: 43.75em) {
+      .m-teaser__when {
+        font-size: 1.625em; } }
+  .m-teaser__intro {
+    font-style: italic;
+    margin-bottom: .5em; }
+    @media (min-width: 43.75em) {
+      .m-teaser__intro {
+        font-size: 1.125em; } }
+  .m-teaser__where {
+    font-family: "lust-script-display", georgia, serif;
+    line-height: 1.2;
+    font-size: 1.125em;
+    margin-bottom: .5em; }
+    @media (min-width: 43.75em) {
+      .m-teaser__where {
+        font-size: 1.625em; } }
+  .m-teaser__button {
+    font-style: italic; }
 
 .m-tickets {
   text-align: center; }

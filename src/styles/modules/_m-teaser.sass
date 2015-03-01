@@ -1,22 +1,29 @@
 .m-teaser
-  %teaser-bold
-    @extend .as-h3
-    @extend .script
+  =teaser-bold
+    font-family: $fonts--comp
     line-height: 1.2
+    font-size: em($ratio__medium)
+    margin-bottom: .5em
+    +respond-min($bp__tablet-portrait)
+      font-size: em($ratio__large)
 
 
   @extend .l-block
   text-align: center
 
   &__when
-    @extend %teaser-bold
+    +teaser-bold
 
   &__intro
-    @extend .uppercase
+    font-style: italic
+    margin-bottom: .5em
+    +respond-min($bp__tablet-portrait)
+      font-size: em($ratio__medium)
 
   &__where
-    @extend %teaser-bold
+    +teaser-bold
 
   &__button
+    font-style: italic
     @extend .o-button
     @extend .margin-top-regular
