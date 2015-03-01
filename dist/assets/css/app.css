@@ -525,7 +525,7 @@ input[type=checkbox], input[type=radio] {
   color: #aaa; }
 
 .text--primary {
-  color: #046c97; }
+  color: #37a5d4; }
 
 .text--centered {
   text-align: center; }
@@ -635,15 +635,15 @@ a {
   background-repeat: repeat-x;
   background-size: auto 2px;
   background-position: 0 18px;
-  color: #046c97; }
+  color: #37a5d4; }
   a:visited {
-    color: #046c97; }
+    color: #37a5d4; }
   a:focus {
-    color: #034865; }
+    color: #2688b2; }
   a:hover {
-    color: #034865; }
+    color: #2688b2; }
   a:active {
-    color: #034865; }
+    color: #2688b2; }
 
 .link, [class^="link--"]:before, [class*=" link--"] {
   transition: color 0.125s;
@@ -702,11 +702,11 @@ hr, .hr {
 
 ::-moz-selection {
   color: #FFF;
-  background-color: #046c97; }
+  background-color: #37a5d4; }
 
 ::selection {
   color: #FFF;
-  background-color: #046c97; }
+  background-color: #37a5d4; }
 
 table {
   width: 100%; }
@@ -818,7 +818,7 @@ h4, .as-h4, .m-categories__title {
   color: #aaa; }
 
 .color--red {
-  color: #046c97; }
+  color: #37a5d4; }
   .l-section--color .color--red {
     color: #f6f6f6; }
 
@@ -1053,7 +1053,7 @@ h4, .as-h4, .m-categories__title {
   text-align: center;
   line-height: 2.5em;
   border-radius: 2px;
-  border: 2px solid #046c97;
+  border: 2px solid #37a5d4;
   background: #222222;
   color: #FFF;
   max-width: 25rem;
@@ -1140,7 +1140,7 @@ h4, .as-h4, .m-categories__title {
           animation-delay: 2000ms; }
 
 .m-home {
-  background-color: #046c97; }
+  background-color: #37a5d4; }
   .m-home body {
     color: #FFF; }
 
@@ -1182,7 +1182,7 @@ h4, .as-h4, .m-categories__title {
         font-size: 1.625em; } }
   .m-teaser__intro {
     font-style: italic;
-    margin-bottom: 1em 0; }
+    margin: 1em 0 1.2em; }
     @media (min-width: 43.75em) {
       .m-teaser__intro {
         font-size: 1.125em; } }
