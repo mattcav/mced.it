@@ -1206,7 +1206,7 @@ h4, .as-h4, .m-categories__title {
     font-style: italic;
     line-height: 1.6; }
   .m-banner__title {
-    margin-top: 11rem; }
+    margin-top: 8rem; }
     .m-banner__title .o-title {
       max-width: 32rem; }
     @media (min-width: 43.75em) {
@@ -1218,21 +1218,21 @@ h4, .as-h4, .m-categories__title {
   .m-teaser__when {
     font-family: "lust-script-display", georgia, serif;
     line-height: 1.2;
-    font-size: 1.125em;
+    font-size: 1.5em;
     margin-bottom: .5em; }
     @media (min-width: 43.75em) {
       .m-teaser__when {
         font-size: 1.625em; } }
   .m-teaser__intro {
     font-style: italic;
-    margin-bottom: .5em; }
+    margin-bottom: 1em 0; }
     @media (min-width: 43.75em) {
       .m-teaser__intro {
         font-size: 1.125em; } }
   .m-teaser__where {
     font-family: "lust-script-display", georgia, serif;
     line-height: 1.2;
-    font-size: 1.125em;
+    font-size: 1.5em;
     margin-bottom: .5em; }
     @media (min-width: 43.75em) {
       .m-teaser__where {
