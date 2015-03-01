@@ -3,10 +3,19 @@
     if (!win.addEventListener) {
         return;
     }
-    // toggle menu
+    var enhanceclass = 'cutsthemustard',
+        readyclass = 'is-ready';
+    // adds .cutsthemustard to html
+    doc.documentElement.className += ' ' + enhanceclass;
+
+    // adds .is-ready to html
+    doc.addEventListener('DOMContentLoaded', function(event) {
+      doc.documentElement.className += ' ' + readyclass;
+    });
+
+    // toggle menu - here for the future
     var linkclass = 'js-navigation-control',
         activeclass = 'js-navigation-active',
-        enhanceclass = 'cutsthemustard',
         toggleClassName = function (element, toggleClass) {
             var reg = new RegExp('(\\s|^)' + toggleClass + '(\\s|$)');
             if (!element.className.match(reg)) {
@@ -23,7 +32,6 @@
                 toggleClassName(doc.body, activeclass);
             }
         };
-    doc.documentElement.className += ' ' + enhanceclass;
     doc.addEventListener('click', navListener, false);
 
 }(this, this.document));

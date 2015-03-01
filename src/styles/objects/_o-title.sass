@@ -1,13 +1,10 @@
 .o-title
-  path
-    opacity: 0
-    transform: translateX(-10%)
-
-  @for $i from 1 through 20
-    path:nth-child(#{$i})
-      transition: all 400ms ease-in (100ms * $i)
-
   .cutsthemustard &
     path
-      opacity: 1
-      transform: translateX(0%)
+      @extend %a-letter
+      opacity: 0
+      transform: translateX(-10%)
+
+    @for $i from 1 through 20
+      path:nth-child(#{$i})
+        animation-delay: (100ms * $i)
