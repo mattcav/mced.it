@@ -1,11 +1,14 @@
-# Assemble Zurb Foundation Template
+# FTF2015 page
 
-This is my template to start projects that uses Assemble, Foundation, Grunt and libsass!
-
+This is FTF2015 source files. 
 Author: Matteo Cavucci (mced.it)
 
 Based on: 
-[Zurb Foundation](http://foundation.zurb.com)
 [Assemble.io](http://assemble.io)
 Grunt, Bower, Libsass
+
+## grunt tasks:
+
+$ grunt serve to work
+$ grunt build to build assets
 

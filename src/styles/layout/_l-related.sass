@@ -6,7 +6,6 @@
   .m-category
     @extend .l-block
     padding: $rithm
-    border-bottom: 1px solid $color__grey4
     +respond-min($bp__phablet)
       width: 50%
       float: left
@@ -15,16 +14,17 @@
       &:last-child
         border-right: none
 
-  .m-category__title
-    margin-top: 0
-    float: left
-    width: 33%
+  +respond-min($bp__phone-landscape)
+    .m-category__title
+      margin-top: 0
+      float: left
+      width: 33%
 
-  .m-category__list
-    float: right
-    width: 66%
-    +respond-min($bp__desktop)
-      width: 50%
+    .m-category__list
+      float: right
+      width: 66%
+      +respond-min($bp__desktop)
+        width: 50%
 
 
 

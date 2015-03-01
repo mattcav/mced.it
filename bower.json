@@ -1,6 +1,6 @@
 {
-  "name": "usertest/lab",
+  "name": "ftf2015",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+
   }
 }

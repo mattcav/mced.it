@@ -1,2 +1,0 @@
-##Partner
-Partner per il reperimento dei partecipanti alle ricerche è la **<a title="Link esterno al sito RFR" href="http://www.rfr-international.net/">RFR International</a>**, società specializzata nella fornitura di servizi per ricerche di mercato nazionali e internazionali.

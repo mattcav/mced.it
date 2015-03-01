@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json ftf2015@0.0.1 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/gattogrigio/Desktop/Projects/ftf2015',
+6 verbose install   [ 'assemble',
+6 verbose install     'grunt',
+6 verbose install     'grunt-autoprefixer',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-connect',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-newer',
+6 verbose install     'grunt-sass',
+6 verbose install     'grunt-sass-directory-import',
+6 verbose install     'load-grunt-tasks',
+6 verbose install     'node-sass',
+6 verbose install     'time-grunt' ] ]
+7 info preinstall ftf2015@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt-contrib-clean@~0.6.0 /Users/gattogrigio/Desktop/Projects/ftf2015
+10 verbose already installed skipping grunt-contrib-concat@~0.5.1 /Users/gattogrigio/Desktop/Projects/ftf2015
+11 verbose already installed skipping grunt-contrib-connect@~0.9.0 /Users/gattogrigio/Desktop/Projects/ftf2015
+12 verbose already installed skipping grunt-contrib-cssmin@~0.12.2 /Users/gattogrigio/Desktop/Projects/ftf2015
+13 verbose already installed skipping grunt-contrib-uglify@~0.8.0 /Users/gattogrigio/Desktop/Projects/ftf2015
+14 verbose already installed skipping grunt-contrib-watch@~0.6.1 /Users/gattogrigio/Desktop/Projects/ftf2015
+15 verbose already installed skipping grunt-newer@~1.1.0 /Users/gattogrigio/Desktop/Projects/ftf2015
+16 verbose already installed skipping grunt-sass@~0.18.0 /Users/gattogrigio/Desktop/Projects/ftf2015
+17 verbose cache add [ 'grunt-sass-directory-import@git+ssh://git@github.com:mattcavgrunt-sass-directory-import.git',
+17 verbose cache add   null ]
+18 verbose cache add name=undefined spec="grunt-sass-directory-import@git+ssh://git@github.com:mattcavgrunt-sass-directory-import.git" args=["grunt-sass-directory-import@git+ssh://git@github.com:mattcavgrunt-sass-directory-import.git",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'grunt-sass-directory-import@git+ssh://git@github.com:mattcavgrunt-sass-directory-import.git',
+19 verbose parsed url   path: 'grunt-sass-directory-import@git+ssh://git@github.com:mattcavgrunt-sass-directory-import.git',
+19 verbose parsed url   href: 'grunt-sass-directory-import@git+ssh://git@github.com:mattcavgrunt-sass-directory-import.git' }
+20 verbose already installed skipping load-grunt-tasks@~3.1.0 /Users/gattogrigio/Desktop/Projects/ftf2015
+21 verbose already installed skipping node-sass@~2.0.1 /Users/gattogrigio/Desktop/Projects/ftf2015
+22 verbose cache add name="grunt-sass-directory-import" spec="git+ssh://git@github.com:mattcavgrunt-sass-directory-import.git" args=["grunt-sass-directory-import","git+ssh://git@github.com:mattcavgrunt-sass-directory-import.git"]
+23 verbose parsed url { protocol: 'git+ssh:',
+23 verbose parsed url   slashes: true,
+23 verbose parsed url   auth: 'git',
+23 verbose parsed url   host: 'github.com',
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: 'github.com',
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: '/:mattcavgrunt-sass-directory-import.git',
+23 verbose parsed url   path: '/:mattcavgrunt-sass-directory-import.git',
+23 verbose parsed url   href: 'git+ssh://git@github.com/:mattcavgrunt-sass-directory-import.git' }
+24 verbose already installed skipping time-grunt@~1.1.0 /Users/gattogrigio/Desktop/Projects/ftf2015
+25 silly lockFile e611720e-vgrunt-sass-directory-import-git git@github.com:mattcavgrunt-sass-directory-import.git
+26 verbose lock git@github.com:mattcavgrunt-sass-directory-import.git /Users/gattogrigio/.npm/e611720e-vgrunt-sass-directory-import-git.lock
+27 verbose addRemoteGit [ 'git@github.com:mattcavgrunt-sass-directory-import.git',
+27 verbose addRemoteGit   'master' ]
+28 verbose already installed skipping assemble@~0.4.42 /Users/gattogrigio/Desktop/Projects/ftf2015
+29 verbose already installed skipping grunt@~0.4.5 /Users/gattogrigio/Desktop/Projects/ftf2015
+30 verbose already installed skipping grunt-autoprefixer@~2.2.0 /Users/gattogrigio/Desktop/Projects/ftf2015
+31 error git clone git@github.com:mattcavgrunt-sass-directory-import.git Cloning into bare repository '/Users/gattogrigio/.npm/_git-remotes/git-github-com-mattcavgrunt-sass-directory-import-git-e611720e'...
+31 error git clone git@github.com:mattcavgrunt-sass-directory-import.git ERROR: Repository not found.
+31 error git clone git@github.com:mattcavgrunt-sass-directory-import.git fatal: Could not read from remote repository.
+31 error git clone git@github.com:mattcavgrunt-sass-directory-import.git
+31 error git clone git@github.com:mattcavgrunt-sass-directory-import.git Please make sure you have the correct access rights
+31 error git clone git@github.com:mattcavgrunt-sass-directory-import.git and the repository exists.
+32 silly lockFile e611720e-vgrunt-sass-directory-import-git git@github.com:mattcavgrunt-sass-directory-import.git
+33 silly lockFile e611720e-vgrunt-sass-directory-import-git git@github.com:mattcavgrunt-sass-directory-import.git
+34 error Error: Command failed: Cloning into bare repository '/Users/gattogrigio/.npm/_git-remotes/git-github-com-mattcavgrunt-sass-directory-import-git-e611720e'...
+34 error ERROR: Repository not found.
+34 error fatal: Could not read from remote repository.
+34 error
+34 error Please make sure you have the correct access rights
+34 error and the repository exists.
+34 error
+34 error     at ChildProcess.exithandler (child_process.js:648:15)
+34 error     at ChildProcess.emit (events.js:98:17)
+34 error     at maybeClose (child_process.js:756:16)
+34 error     at Socket.<anonymous> (child_process.js:969:11)
+34 error     at Socket.emit (events.js:95:17)
+34 error     at Pipe.close (net.js:465:12)
+35 error If you need help, you may report this *entire* log,
+35 error including the npm and node versions, at:
+35 error     <http://github.com/npm/npm/issues>
+36 error System Darwin 14.0.0
+37 error command "node" "/usr/local/bin/npm" "install"
+38 error cwd /Users/gattogrigio/Desktop/Projects/ftf2015
+39 error node -v v0.10.33
+40 error npm -v 1.4.28
+41 error code 128
+42 verbose exit [ 1, true ]
