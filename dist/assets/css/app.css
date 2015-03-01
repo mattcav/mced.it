@@ -1189,6 +1189,7 @@ h4, .as-h4, .m-categories__title {
   .o-quote__title {
     text-align: left; }
   .o-quote__author {
+    font-family: "lust-script-display", georgia, serif;
     text-align: right; }
 
 .m-home {
@@ -1255,7 +1256,7 @@ h4, .as-h4, .m-categories__title {
 .m-tickets__title {
   font-style: italic;
   line-height: 1.2; }
-@media (min-width: 62.5em) {
+@media (min-width: 43.75em) {
   .m-tickets__form {
     background-image: url('../images/whiterabbit.jpg');
     background-repeat: no-repeat;
