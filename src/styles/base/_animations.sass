@@ -13,3 +13,23 @@
   to
     opacity: 1
     transform: translateX(0%)
+
+%a-backgrounds
+  animation-name: change-bgcolor
+  animation-duration: 60s
+  animation-timing-function: ease-in-out
+  animation-delay: 0s
+  animation-iteration-count: infinite
+  animation-direction: normal
+  animation-play-state: running
+  animation-fill-mode: forwards
+
+@keyframes change-bgcolor
+  0%
+    background-color: $color__blue
+  25%
+    background-color: $color__purple
+  50%
+    background-color: $color__red
+  75%
+    background-color: $color__black
