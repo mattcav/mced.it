@@ -26,10 +26,11 @@
   line-height: em($object-height__small)
   border-radius: $border-radius
   border: 2px solid $color__primary
-  background: $color__white
+  background: $color__black
+  color: $color__white
   transition: background-color $transition__duration, color $transition__duration
   +on-interaction
-    background-color: $color__primary
+    background-color: $color__black
     color: $color__white
 
 .o-button--small
