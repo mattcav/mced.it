@@ -1185,7 +1185,7 @@ h4, .as-h4, .m-categories__title {
           animation-delay: 2000ms; }
 
 .o-quote {
-  max-width: 42rem; }
+  max-width: 44rem; }
   .o-quote__title {
     text-align: left; }
   .o-quote__author {
@@ -1217,7 +1217,7 @@ h4, .as-h4, .m-categories__title {
   .m-banner__title {
     margin-top: 8rem; }
     .m-banner__title .o-title {
-      max-width: 42rem; }
+      max-width: 44rem; }
     @media (min-width: 43.75em) {
       .m-banner__title {
         margin-top: 15rem; } }
@@ -1259,8 +1259,8 @@ h4, .as-h4, .m-categories__title {
   .m-tickets__form {
     background-image: url('../images/whiterabbit.jpg');
     background-repeat: no-repeat;
-    background-position: calc(100% - 1rem) 100%;
+    background-position: calc(100% - 2rem) 100%;
     background-size: contain; } }
 .m-tickets__form iframe {
   width: 100%;
-  max-width: 42rem; }
+  max-width: 44rem; }
