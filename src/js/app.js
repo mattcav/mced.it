@@ -3,6 +3,7 @@
     if (!win.addEventListener) {
         return;
     }
+    // toggle menu
     var linkclass = 'js-navigation-control',
         activeclass = 'js-navigation-active',
         enhanceclass = 'cutsthemustard',
@@ -24,4 +25,5 @@
         };
     doc.documentElement.className += ' ' + enhanceclass;
     doc.addEventListener('click', navListener, false);
+
 }(this, this.document));

@@ -21,17 +21,18 @@
 .o-button
   padding-left: 1em
   padding-right: 1em
-  display: block
+  display: inline-block
   text-align: center
   line-height: em($object-height__small)
   border-radius: $border-radius
   border: 2px solid $color__primary
   background: $color__black
   color: $color__white
+  max-width: $narrow-col
   transition: background-color $transition__duration, color $transition__duration
   +on-interaction
-    background-color: $color__black
-    color: $color__white
+    background-color: $color__white
+    color: $color__black
 
 .o-button--small
   font-size: em($ratio__small)
