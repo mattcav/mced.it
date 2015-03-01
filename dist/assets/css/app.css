@@ -659,18 +659,18 @@ input[type=checkbox], input[type=radio] {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .l-block:before, .l-boxes__box:before, .l-related .m-category:before, .m-banner__title:before, .m-teaser:before, .m-tickets__header:before, .m-tickets__form iframe:before, .l-block--container:before, .m-tickets__form:before, .l-boxes:before, .clearfix:after, .l-block:after, .l-boxes__box:after, .l-related .m-category:after, .m-banner__title:after, .m-teaser:after, .m-tickets__header:after, .m-tickets__form iframe:after, .l-block--container:after, .m-tickets__form:after, .l-boxes:after {
+.clearfix:before, .l-block:before, .l-boxes__box:before, .l-related .m-category:before, .m-banner__title:before, .m-teaser:before, .m-tickets__header:before, .m-tickets__notes:before, .m-tickets__form iframe:before, .l-block--container:before, .m-tickets__form:before, .l-boxes:before, .clearfix:after, .l-block:after, .l-boxes__box:after, .l-related .m-category:after, .m-banner__title:after, .m-teaser:after, .m-tickets__header:after, .m-tickets__notes:after, .m-tickets__form iframe:after, .l-block--container:after, .m-tickets__form:after, .l-boxes:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .l-block:after, .l-boxes__box:after, .l-related .m-category:after, .m-banner__title:after, .m-teaser:after, .m-tickets__header:after, .m-tickets__form iframe:after, .l-block--container:after, .m-tickets__form:after, .l-boxes:after {
+.clearfix:after, .l-block:after, .l-boxes__box:after, .l-related .m-category:after, .m-banner__title:after, .m-teaser:after, .m-tickets__header:after, .m-tickets__notes:after, .m-tickets__form iframe:after, .l-block--container:after, .m-tickets__form:after, .l-boxes:after {
   clear: both; }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix, .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__form iframe, .l-block--container, .m-tickets__form, .l-boxes {
+.clearfix, .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe, .l-block--container, .m-tickets__form, .l-boxes {
   *zoom: 1; }
 
 a {
@@ -866,15 +866,15 @@ h4, .as-h4, .m-categories__title {
   .l-section--color .color--red {
     color: #f6f6f6; }
 
-.l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__form iframe {
+.l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe {
   padding-left: 1.625rem;
   padding-right: 1.625rem; }
   @media (min-width: 30em) {
-    .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__form iframe {
+    .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe {
       padding-left: 2.03125rem;
       padding-right: 2.03125rem; } }
   @media (min-width: 90.0625em) {
-    .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__form iframe {
+    .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe {
       padding-left: 2.4375rem;
       padding-right: 2.4375rem; } }
 
@@ -1119,6 +1119,14 @@ h4, .as-h4, .m-categories__title {
 .o-button--compact {
   min-width: 0.10156remem; }
 
+.o-quote {
+  max-width: 44rem; }
+  .o-quote__title {
+    text-align: left; }
+  .o-quote__author {
+    font-family: "lust-script-display", georgia, serif;
+    text-align: right; }
+
 .cutsthemustard .o-title path {
   opacity: 0;
   -webkit-transform: translateX(-10%);
@@ -1184,19 +1192,6 @@ h4, .as-h4, .m-categories__title {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms; }
 
-.o-quote {
-  max-width: 44rem; }
-  .o-quote__title {
-    text-align: left; }
-  .o-quote__author {
-    font-family: "lust-script-display", georgia, serif;
-    text-align: right; }
-
-.m-home {
-  background-color: #37a5d4; }
-  .m-home body {
-    color: #FFF; }
-
 .m-banner {
   overflow: hidden;
   text-align: center;
@@ -1218,18 +1213,33 @@ h4, .as-h4, .m-categories__title {
   .m-banner__title {
     margin-top: 8rem; }
     .m-banner__title .o-title {
-      max-width: 44rem; }
+      max-width: 32rem; }
     @media (min-width: 43.75em) {
       .m-banner__title {
         margin-top: 15rem; } }
 
+.m-home {
+  background-color: #37a5d4;
+  overflow-x: hidden; }
+  .m-home body {
+    color: #FFF; }
+
+.m-social {
+  background: #FFF;
+  color: #222222;
+  text-align: center; }
+  .m-social span {
+    display: inline-block;
+    max-width: 170px;
+    margin-right: 1rem; }
+
 .m-teaser {
   text-align: center; }
   .m-teaser__when {
-    font-family: "lust-script-display", georgia, serif;
     line-height: 1.2;
     font-size: 1.5em;
-    margin-bottom: .5em; }
+    margin-bottom: .5em;
+    font-family: "lust-script-display", georgia, serif; }
     @media (min-width: 43.75em) {
       .m-teaser__when {
         font-size: 1.625em; } }
@@ -1240,7 +1250,6 @@ h4, .as-h4, .m-categories__title {
       .m-teaser__intro {
         font-size: 1.125em; } }
   .m-teaser__where {
-    font-family: "lust-script-display", georgia, serif;
     line-height: 1.2;
     font-size: 1.5em;
     margin-bottom: .5em; }
@@ -1256,21 +1265,35 @@ h4, .as-h4, .m-categories__title {
 .m-tickets__title {
   font-style: italic;
   line-height: 1.2; }
+.m-tickets__notes {
+  width: 100%;
+  max-width: 44rem;
+  margin-bottom: 0.5rem; }
+  @media (min-width: 43.75em) {
+    .m-tickets__notes {
+      width: 66.666%; } }
+  @media (min-width: 62.5em) {
+    .m-tickets__notes {
+      width: 100%; } }
+  .m-tickets__notes p {
+    margin-bottom: 0.5rem; }
 @media (min-width: 43.75em) {
   .m-tickets__form {
+    min-height: 32rem;
     background-image: url('../images/whiterabbit.jpg');
     background-repeat: no-repeat;
-    background-position: calc(100% - 2rem) 100%;
-    background-size: contain; } }
+    background-position: calc(100% - 1rem) calc(100% - 1rem);
+    background-size: auto 26rem; } }
+@media (min-width: 62.5em) {
+  .m-tickets__form {
+    background-size: auto 30rem;
+    background-position: calc(100% - 1rem) calc(100% - 1rem); } }
 .m-tickets__form iframe {
   width: 100%;
   max-width: 44rem; }
-
-.m-social {
-  background: #FFF;
-  color: #222222;
-  text-align: center; }
-  .m-social span {
-    display: inline-block;
-    max-width: 170px;
-    margin-right: 1rem; }
+  @media (min-width: 43.75em) {
+    .m-tickets__form iframe {
+      width: 66.666%; } }
+  @media (min-width: 62.5em) {
+    .m-tickets__form iframe {
+      width: 100%; } }

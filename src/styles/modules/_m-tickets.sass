@@ -1,4 +1,11 @@
 .m-tickets
+  =ticket-col
+    width: 100%
+    +respond-min($bp__tablet-portrait)
+      width: 66.666%
+    +respond-min($bp__tablet-landscape)
+      width: 100%
+
   @extend .margin-top-double
 
   &__inner
@@ -14,17 +21,31 @@
     font-style: italic
     line-height: 1.2
 
+  &__notes
+    @extend .l-block
+    +ticket-col
+    max-width: $regular-col
+    margin-bottom: 0.5rem
+    p
+      margin-bottom: 0.5rem
+
+
   &__form
     @extend .l-block--container
     +respond-min($bp__tablet-portrait)
+      min-height: 32rem
       background:
         image: url('../images/whiterabbit.jpg')
         repeat: no-repeat
-        position: calc(100% - 2rem) 100%
-        size: contain
+        position: calc(100% - 1rem) calc(100% - 1rem)
+        size: auto 26rem
+    +respond-min($bp__tablet-landscape)
+      background:
+        size: auto 30rem
+        position: calc(100% - 1rem) calc(100% - 1rem)
 
     iframe
       @extend .l-block
-      width: 100%
+      +ticket-col
       max-width: $regular-col
 
