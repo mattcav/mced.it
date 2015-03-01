@@ -3,10 +3,29 @@
   text-align: center
   background:
     image: url(../images/cat.png)
-    position: center top
+    position: center 0
     size: 100%
     repeat: no-repeat
+  +respond-min($bp__tablet-portrait)
+    background:
+      image: url(../images/cat-big.png)
+      size: contain
+
+
+
+  &__intro
+    display: block
+    background-color: $color__black
+    color: $color__white
+    text-align: center
 
   &__title
+    @extend .l-block
     @extend .as-h2
+    margin-top: 11rem
+    .o-title
+     max-width: $regular-col
+    +respond-min($bp__tablet-portrait)
+      margin-top: 22rem
+
 
