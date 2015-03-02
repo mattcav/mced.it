@@ -132,24 +132,6 @@ module.exports = function(grunt) {
       },
     },
 
-    assemble: {
-      pages: {
-        options: {
-          flatten: true,
-          production: false,
-          assets: '<%= config.dist %>/assets',
-          layout: '<%= config.src %>/templates/layouts/default.hbs',
-          data: '<%= config.src %>/data/*.{json,yml}',
-          partials: '<%= config.src %>/templates/partials/*.hbs'
-        },
-        files: [
-          {
-            '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
-          },
-        ]
-      },
-    },
-
     // Before generating any new files,
     // remove any previously-created files.
     clean: ['<%= config.dist %>/**/*.{html,xml}']
