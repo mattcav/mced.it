@@ -9,10 +9,12 @@
     {{#if production}}
       <link rel="stylesheet" href="{{assets}}/css/app.min.css">
     {{else}}
-      <link rel="stylesheet" href="{{assets}}/css/app.min.css">
+      <link rel="stylesheet" href="{{assets}}/css/app.css">
     {{/if}}
     <script src="//use.typekit.net/cqe8mew.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+
+    {{> _metatags}}
 
   </head>
   <body>
