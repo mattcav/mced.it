@@ -118,6 +118,7 @@ module.exports = function(grunt) {
       pages: {
         options: {
           flatten: true,
+          production: false,
           assets: '<%= config.dist %>/assets',
           layout: '<%= config.src %>/templates/layouts/default.hbs',
           data: '<%= config.src %>/data/*.{json,yml}',
@@ -127,41 +128,24 @@ module.exports = function(grunt) {
           {
             '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
           },
+        ]
+      },
+    },
+
+    assemble: {
+      pages: {
+        options: {
+          flatten: true,
+          production: false,
+          assets: '<%= config.dist %>/assets',
+          layout: '<%= config.src %>/templates/layouts/default.hbs',
+          data: '<%= config.src %>/data/*.{json,yml}',
+          partials: '<%= config.src %>/templates/partials/*.hbs'
+        },
+        files: [
           {
-            expand: true,
-            cwd: '<%= config.src %>/templates/pages/persone',
-            src: ['*.hbs'],
-            dest: '<%= config.dist %>/',
-            ext: '.html'
+            '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
           },
-          {
-            expand: true,
-            cwd: '<%= config.src %>/templates/pages/risorse',
-            src: ['*.hbs'],
-            dest: '<%= config.dist %>/',
-            ext: '.html'
-          },
-          {
-            expand: true,
-            cwd: '<%= config.src %>/templates/pages/ricerca',
-            src: ['*.hbs'],
-            dest: '<%= config.dist %>/',
-            ext: '.html'
-          },
-          {
-            expand: true,
-            cwd: '<%= config.src %>/templates/pages/progettazione',
-            src: ['*.hbs'],
-            dest: '<%= config.dist %>/',
-            ext: '.html'
-          },
-          {
-            expand: true,
-            cwd: '<%= config.src %>/templates/pages/valutazione',
-            src: ['*.hbs'],
-            dest: '<%= config.dist %>/',
-            ext: '.html'
-          }
         ]
       },
     },
