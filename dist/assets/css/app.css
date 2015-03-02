@@ -517,7 +517,7 @@ input[type=checkbox], input[type=radio] {
   padding-top: 0.8125rem !important;
   padding-bottom: 0.8125rem !important; }
 
-.padding-regular {
+.padding-regular, .m-footer__inner {
   padding-top: 1.625rem !important;
   padding-bottom: 1.625rem !important; }
 
@@ -531,7 +531,7 @@ input[type=checkbox], input[type=radio] {
 .padding-top-half {
   padding-top: 0.8125rem !important; }
 
-.padding-top-regular {
+.padding-top-regular, .m-footer {
   padding-top: 1.625rem !important; }
 
 .padding-top-double {
@@ -617,7 +617,7 @@ input[type=checkbox], input[type=radio] {
   padding-bottom: 0;
   margin-bottom: 0; }
 
-.centered, .l-boxes__box {
+.centered, .l-boxes__box, .o-ftf__logo {
   margin-left: auto;
   margin-right: auto; }
 
@@ -659,18 +659,18 @@ input[type=checkbox], input[type=radio] {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .l-block:before, .l-boxes__box:before, .l-related .m-category:before, .m-banner__title:before, .m-teaser:before, .m-tickets__header:before, .m-tickets__notes:before, .m-tickets__form iframe:before, .l-block--container:before, .m-tickets__form:before, .l-boxes:before, .clearfix:after, .l-block:after, .l-boxes__box:after, .l-related .m-category:after, .m-banner__title:after, .m-teaser:after, .m-tickets__header:after, .m-tickets__notes:after, .m-tickets__form iframe:after, .l-block--container:after, .m-tickets__form:after, .l-boxes:after {
+.clearfix:before, .l-block:before, .l-boxes__box:before, .l-related .m-category:before, .m-banner__title:before, .m-teaser:before, .m-tickets__header:before, .m-tickets__notes:before, .m-tickets__form iframe:before, .m-footer:before, .l-block--container:before, .m-tickets__form:before, .m-footer__inner:before, .l-boxes:before, .clearfix:after, .l-block:after, .l-boxes__box:after, .l-related .m-category:after, .m-banner__title:after, .m-teaser:after, .m-tickets__header:after, .m-tickets__notes:after, .m-tickets__form iframe:after, .m-footer:after, .l-block--container:after, .m-tickets__form:after, .m-footer__inner:after, .l-boxes:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .l-block:after, .l-boxes__box:after, .l-related .m-category:after, .m-banner__title:after, .m-teaser:after, .m-tickets__header:after, .m-tickets__notes:after, .m-tickets__form iframe:after, .l-block--container:after, .m-tickets__form:after, .l-boxes:after {
+.clearfix:after, .l-block:after, .l-boxes__box:after, .l-related .m-category:after, .m-banner__title:after, .m-teaser:after, .m-tickets__header:after, .m-tickets__notes:after, .m-tickets__form iframe:after, .m-footer:after, .l-block--container:after, .m-tickets__form:after, .m-footer__inner:after, .l-boxes:after {
   clear: both; }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix, .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe, .l-block--container, .m-tickets__form, .l-boxes {
+.clearfix, .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe, .m-footer, .l-block--container, .m-tickets__form, .m-footer__inner, .l-boxes {
   *zoom: 1; }
 
 a {
@@ -866,15 +866,15 @@ h4, .as-h4, .m-categories__title {
   .l-section--color .color--red {
     color: #f6f6f6; }
 
-.l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe {
+.l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe, .m-footer {
   padding-left: 1.625rem;
   padding-right: 1.625rem; }
   @media (min-width: 30em) {
-    .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe {
+    .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe, .m-footer {
       padding-left: 2.03125rem;
       padding-right: 2.03125rem; } }
   @media (min-width: 90.0625em) {
-    .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe {
+    .l-block, .l-boxes__box, .l-related .m-category, .m-banner__title, .m-teaser, .m-tickets__header, .m-tickets__notes, .m-tickets__form iframe, .m-footer {
       padding-left: 2.4375rem;
       padding-right: 2.4375rem; } }
 
@@ -890,12 +890,12 @@ h4, .as-h4, .m-categories__title {
       padding-left: 4.0625rem;
       padding-right: 4.0625rem; } }
 
-.l-block--container, .m-tickets__form {
+.l-block--container, .m-tickets__form, .m-footer__inner {
   margin: 0 auto;
   width: 100%;
   max-width: 64rem; }
   @media (min-width: 90.0625em) {
-    .l-block--container, .m-tickets__form {
+    .l-block--container, .m-tickets__form, .m-footer__inner {
       max-width: 72rem; } }
 
 @media (min-width: 30em) {
@@ -1192,6 +1192,22 @@ h4, .as-h4, .m-categories__title {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms; }
 
+.o-ftf {
+  text-align: center; }
+  .o-ftf__text {
+    font-size: 0.75em;
+    line-height: 1.25;
+    margin-bottom: 1rem; }
+  @media (min-width: 43.75em) {
+    .o-ftf__text {
+      line-height: 1.4; }
+    .o-ftf__logo {
+      margin: 0; } }
+  @media (min-width: 62.5em) {
+    .o-ftf__logo {
+      float: left;
+      margin: 0.3rem 1rem 0.5rem 0; } }
+
 .m-banner {
   overflow: hidden;
   text-align: center;
@@ -1231,7 +1247,9 @@ h4, .as-h4, .m-categories__title {
   .m-social span {
     display: inline-block;
     max-width: 170px;
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    min-height: 35px;
+    vertical-align: top; }
 
 .m-teaser {
   text-align: center; }
@@ -1300,3 +1318,36 @@ h4, .as-h4, .m-categories__title {
   @media (min-width: 62.5em) {
     .m-tickets__form iframe {
       width: 100%; } }
+
+.m-footer {
+  overflow: hidden;
+  background: #FFF;
+  color: #222222; }
+  .m-footer__inner {
+    border-top: 5px solid #222222; }
+  .m-footer__section {
+    text-align: center; }
+    .m-footer__section--meta p {
+      margin-bottom: 0; }
+  @media (min-width: 43.75em) {
+    .m-footer__inner {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .m-footer__section {
+      text-align: left;
+      float: left;
+      width: 50%; }
+      .m-footer__section--meta {
+        text-align: right;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
+        .m-footer__section--meta p:last-child {
+          margin-bottom: 1.25rem; } }

@@ -7,7 +7,7 @@
 
     <!-- CSS -->
     
-      <link rel="stylesheet" href="assets/css/app.css">
+      <link rel="stylesheet" href="assets/css/app.min.css">
     
     <script src="//use.typekit.net/cqe8mew.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -50,6 +50,15 @@
 
   </head>
   <body>
+    <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=173763686035828";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
 
     
     <main id="main" class="l-main" role="main">
@@ -493,44 +502,58 @@
   <div class="m-social__inner l-block l-block--container">
     <!-- FACEBOOK -->
         <span>
-          <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F2015.fromthefront.it&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+          <div class="fb-like" data-href="http://2015.fromthefront.it" data-send="false" data-layout="button_count" data-width="120" data-show-faces="true" data-colorscheme="dark"></div>
         </span>
 
 
 <!-- TWITTER -->
       <span>
-        <iframe scrolling="no" frameborder="0" id="twitter-widget-0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.1390956745.html#_=1391613664956&amp;count=horizontal&amp;hashtags=ftf15&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2F2015.fromthefront.it%2F&amp;size=m&amp;text=From%20The%20Front%2C%20September%2017th%2F18th%2C%202015%20in%20Bologna%2C%20Italy&amp;url=http%3A%2F%2F2015.fromthefront.it" class="twitter-share-button twitter-tweet-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 90px; height: 20px;"></iframe>
+        <a href="https://twitter.com/share" class="twitter-share-button"
+                    data-url="http://2015.fromthefront.it" data-text="From The Front, September 17th/18th, 2015 in Bologna, Italy"
+                    data-hashtags="ftf15">Tweet</a>
+      <script>!function(d,s,id){var
+      js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </span>
 
 <!-- GOOGLE PLUS -->
 
         <span>
-          <iframe width="100%" scrolling="no" frameborder="0" hspace="0" marginheight="0" marginwidth="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" id="I0_1391613664977" name="I0_1391613664977" src="https://apis.google.com/u/0/_/+1/fastbutton?usegapi=1&amp;bsv=o&amp;size=medium&amp;origin=http%3A%2F%2F2015.fromthefront.it&amp;url=http%3A%2F%2F2015.fromthefront.it%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.it.CAGcSzCDRxQ.O%2Fm%3D__features__%2Fam%3DIQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAItRSTN2qIZCZGIBPAPH_ZSc27bEP1-xDA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1391613664977&amp;parent=http%3A%2F%2F2015.fromthefront.it&amp;pfname=&amp;rpctoken=27997022" data-gapiattached="true" title="+1"></iframe>
+          <div class="g-plusone" data-size="medium"></div>
+	        <script type="text/javascript">
+	          (function() {
+	            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	            po.src = 'https://apis.google.com/js/plusone.js';
+	            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	          })();
+	        </script>
         </span>
+
+
+
+
+
+
 
 
   </div>
 </div>
 
     </main>
-    <footer class="footer" role="contentinfo">
-    <div class="footer__inner">
-        <div class="footer__section footer__section--organization">
-            <img class="ftf__logo" src="assets/images/logo_ftf.png" alt="From the Front Logo">
-            <div class="ftf__text">
-                <p class="ftf__text-item">Associazione From the Front</p>
-                <p class="ftf__text-item">via Caravaggio 36</p>
-                <p class="ftf__text-item">40033 Casalecchio di Reno (BO) Italy</p>
-                <p class="ftf__text-item">C.F. 91344080378</p>
-            </div>
+    <footer class="m-footer" role="contentinfo">
+    <div class="m-footer__inner">
+        <div class="m-footer__section o-ftf">
+            <img class="o-ftf__logo" src="assets/images/logo_ftf.png" alt="From the Front Logo">
+            <ul class="o-ftf__text vcard">
+                <li class="o-ftf__text-item fn organization">Associazione From the Front</li>
+                <li class="o-ftf__text-item street-address">via Caravaggio 36</li>
+                <li class="o-ftf__text-item"><span class="zip">40033</span> <span class="locality">Casalecchio di Reno (BO)</span> <span class="state">Italy</span></li>
+                <li class="o-ftf__text-item vat">C.F. 91344080378</li>
+            </ul>
         </div>
 
-         <div class="footer__section footer__section--meta">
-            <p class="made">made with <span class="made__heart">♥</span> in Italy by&ensp;<a href="http://mced.it/" class="footer__link"><img class="footer__img" src="../images/mced.png" alt="MCED"></a></p>
+         <div class="m-footer__section m-footer__section--meta">
+            <p class="made">made with <span class="made__heart">♥</span> in Italy</p>
             <p class="privacy">
-
-                <a href="#" class="privacy__link">Code of conduct</a>
-                &mdash;
                 <a class="privacy__link" href="https://www.iubenda.com/privacy-policy/155299">
                     Privacy
                 </a>
@@ -541,7 +564,7 @@
 
 
   
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.min.js"></script>
   
   </body>
 </html>

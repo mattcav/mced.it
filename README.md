@@ -9,6 +9,12 @@ Grunt, Bower, Libsass
 
 ## grunt tasks:
 
-$ grunt serve to work
-$ grunt build to build assets
+to work:
+$ grunt serve 
+to work
+
+to build:
+1. set 'production: true' to assemble task on Gruntfile.js
+2. $ grunt build 
+
 

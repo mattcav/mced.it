@@ -1,0 +1,38 @@
+.m-footer
+  @extend .l-block
+  @extend .padding-top-regular
+  @extend .clearfix
+  overflow: hidden
+  background: $color__white
+  color: $color__black
+
+  &__inner
+    @extend .l-block--container
+    @extend .padding-regular
+    border-top: 5px solid $color__black
+
+  &__section
+    text-align: center
+
+    &--meta
+      p
+        margin-bottom: 0
+
+  +respond-min($bp__tablet-portrait)
+
+    &__inner
+      display: flex
+
+    &__section
+      text-align: left
+      float: left
+      width: 50%
+
+      &--meta
+        text-align: right
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        p:last-child
+          margin-bottom: 1.25rem
+
