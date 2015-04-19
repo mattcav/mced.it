@@ -1,4 +1,8 @@
 .o-title
+
+  path
+    fill: $color__marco
+
   .cutsthemustard &
     path
       @extend %a-letter
@@ -8,3 +12,4 @@
     @for $i from 1 through 20
       path:nth-child(#{$i})
         animation-delay: (100ms * $i)
+

@@ -1,9 +1,21 @@
 ---
 title: Frontend in Wonderland
 ---
-{{> _banner}}
-{{> _teaser}}
-{{> _tickets}}
+
+<div class="l-main__opening">
+  {{> _banner}}
+  {{> _teaser}}
+</div>
+
+<div class="l-main__panel">
+  {{> _speakers-teaser}}
+</div>
+
+<div class="l-main__panel">
+   {{> _tickets}}
+</div>
+
+
 <div class="m-social padding-regular">
   <div class="m-social__inner l-block l-block--container">
     {{> _social-shit}}

@@ -1,0 +1,17 @@
+.l-speaker-teaser
+  margin: 4rem auto
+  text-align: center
+
+  &__title
+    @extend .as-h3
+    font-family: $fonts--comp
+    font-style: italic
+
+  &__item
+    display: inline-block
+    padding: 0 1rem
+    +respond-min($bp__desktop)
+      padding: 0 2rem
+
+  +respond-min($bp__tablet-portrait)
+    margin: 7rem auto

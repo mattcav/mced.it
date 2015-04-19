@@ -118,7 +118,7 @@ module.exports = function(grunt) {
       pages: {
         options: {
           flatten: true,
-          production: true,
+          production: false,
           assets: '<%= config.dist %>/assets',
           layout: '<%= config.src %>/templates/layouts/default.hbs',
           data: '<%= config.src %>/data/*.{json,yml}',
