@@ -1105,8 +1105,8 @@ h4, .as-h4, .m-categories__title {
   .o-button:visited, .m-teaser__button:visited {
     color: #FFF; }
   .o-button:hover, .m-teaser__button:hover, .o-button:active, .m-teaser__button:active, .o-button:focus, .m-teaser__button:focus {
-    background-color: #FFF;
-    color: #222222 !important; }
+    background-color: #37a5d4;
+    color: #FFF !important; }
 
 .o-button--small {
   font-size: 0.875em; }
