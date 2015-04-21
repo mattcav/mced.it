@@ -779,7 +779,7 @@ h2, .as-h2 {
   margin-bottom: 0.590909091rem;
   margin-top: 1.181818182rem; }
 
-h3, .as-h3, .l-boxes__title, .l-speaker-teaser__title, .m-banner__title, .m-tickets__title, .m-speaker__name {
+h3, .as-h3, .l-boxes__title, .l-speaker-teaser__title, .m-banner__title, .m-speaker__name, .m-tickets__title {
   font-size: 1.6875rem;
   line-height: 1.925925926rem;
   margin-bottom: 0.962962963rem;
@@ -954,6 +954,9 @@ h4, .as-h4, .m-categories__title {
   padding-top: 1.625rem;
   color: #aaa; }
 
+.l-main__opening {
+  margin-bottom: 10rem; }
+
 .l-page__main, .l-page__side {
   margin-bottom: 1.625rem; }
 @media (min-width: 43.75em) {
@@ -1061,17 +1064,6 @@ h4, .as-h4, .m-categories__title {
 .m-categories__item {
   padding-bottom: 1.625rem; }
 
-.l-valign {
-  display: table;
-  margin: 0 auto;
-  text-align: center;
-  height: 100%;
-  width: 100%; }
-
-.l-valign__child {
-  display: table-cell;
-  vertical-align: middle; }
-
 .l-speaker-teaser {
   margin: 4rem auto;
   text-align: center; }
@@ -1088,8 +1080,16 @@ h4, .as-h4, .m-categories__title {
     .l-speaker-teaser {
       margin: 7rem auto; } }
 
-.l-main__opening {
-  margin-bottom: 10rem; }
+.l-valign {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 100%; }
+
+.l-valign__child {
+  display: table-cell;
+  vertical-align: middle; }
 
 .o-button, .m-teaser__button {
   padding-left: 1em;
@@ -1277,6 +1277,19 @@ h4, .as-h4, .m-categories__title {
     min-height: 35px;
     vertical-align: top; }
 
+.m-speaker {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 15rem;
+  text-align: center; }
+  .m-speaker__img {
+    max-width: 10rem;
+    margin: 0 auto;
+    border-radius: 50%; }
+  .m-speaker__twitter {
+    background-image: none;
+    font-style: italic; }
+
 .m-teaser {
   text-align: center; }
   .m-teaser__when {
@@ -1301,7 +1314,10 @@ h4, .as-h4, .m-categories__title {
       .m-teaser__where {
         font-size: 1.625em; } }
   .m-teaser__button {
-    font-style: italic; }
+    font-style: italic;
+    background-color: #AA0000; }
+    .m-teaser__button:hover {
+      background-color: #222222; }
 
 .m-tickets__inner {
   color: #222222;
@@ -1344,16 +1360,3 @@ h4, .as-h4, .m-categories__title {
   @media (min-width: 62.5em) {
     .m-tickets__form iframe {
       width: 100%; } }
-
-.m-speaker {
-  margin: 1rem auto;
-  width: 100%;
-  max-width: 15rem;
-  text-align: center; }
-  .m-speaker__img {
-    max-width: 10rem;
-    margin: 0 auto;
-    border-radius: 50%; }
-  .m-speaker__twitter {
-    background-image: none;
-    font-style: italic; }

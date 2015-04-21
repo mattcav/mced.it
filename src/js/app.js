@@ -1,0 +1,1 @@
+;function winOpen(a, w, h){w=w||680;h=h||488;window.open(a.href,  null, 'height='+h+', width='+w+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');  }
