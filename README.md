@@ -10,11 +10,9 @@ Grunt, Bower, Libsass
 ## grunt tasks:
 
 to work:
-- Set production: false on Gruntfile.js
 - $ grunt serve 
 
 to build:
-- Set 'production: true' to assemble task on Gruntfile.js
 - $ grunt build 
 
 

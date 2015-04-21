@@ -3,7 +3,7 @@
 module.exports = function(grunt) {
 
   require('time-grunt')(grunt);
-
+  
   // Project configuration.
   grunt.initConfig({
     config: {
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
       pages: {
         options: {
           flatten: true,
-          production: true,
+          production: false,
           assets: '<%= config.dist %>/assets',
           layout: '<%= config.src %>/templates/layouts/default.hbs',
           data: '<%= config.src %>/data/*.{json,yml}',
@@ -159,13 +159,16 @@ module.exports = function(grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('build', [
-    'clean',
-    'assemble',
-    'sass_directory_import',
-    'uglify',
-    'cssmin'
-  ]);
+  grunt.registerTask('build', function(){
+    grunt.config('assemble.pages.options.production', true);
+    grunt.task.run([
+      'clean',
+      'assemble',
+      'sass_directory_import',
+      'uglify',
+      'cssmin'
+    ]);
+  });
 
   grunt.registerTask('default', [
     'build'
