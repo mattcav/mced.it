@@ -165,6 +165,7 @@ module.exports = function(grunt) {
       'clean',
       'assemble',
       'sass_directory_import',
+      'concat',
       'uglify',
       'cssmin'
     ]);
