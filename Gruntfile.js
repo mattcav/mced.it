@@ -3,7 +3,7 @@
 module.exports = function(grunt) {
 
   require('time-grunt')(grunt);
-  
+
   // Project configuration.
   grunt.initConfig({
     config: {
@@ -67,6 +67,43 @@ module.exports = function(grunt) {
       app: {
         src: '<%= config.dist %>/assets/js/app.js',
         dest: '<%= config.dist %>/assets/js/app.min.js'
+      }
+    },
+
+    filerev: {
+      options: {
+        algorithm: 'md5',
+        length: 8
+      },
+      assets: {
+        src: '<%= config.dist %>/assets/**/*.{css,js}'
+      },
+      images: {
+        src: '<%= config.dist %>/assets/**/*.{jpg,jpeg,gif,png,webp,svg}'
+      }
+    },
+
+    useminPrepare: {
+      html: '<%= config.dist %>/index.html',
+      options: {
+        dest: '<%= config.dist %>',
+        flow: {
+          html: {
+            steps: {
+              js: ['concat', 'uglifyjs'],
+              css: ['cssmin']
+            },
+            post: {}
+          }
+        }
+      }
+    },
+
+    usemin: {
+      html: ['<%= config.dist %>/{,*/}*.html'],
+      css: ['<%= config.dist %>/assets/css/{,*/}*.css'],
+      options: {
+        assetsDirs: ['<%= config.dist %>','./assets/images']
       }
     },
 
@@ -134,7 +171,7 @@ module.exports = function(grunt) {
 
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: ['<%= config.dist %>/**/*.{html,xml,css,js}']
 
   });
 
@@ -149,6 +186,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-sass-directory-import');
+  grunt.loadNpmTasks('grunt-filerev');
+  grunt.loadNpmTasks('grunt-usemin');
 
 
   grunt.registerTask('serve', [
@@ -163,11 +202,16 @@ module.exports = function(grunt) {
     grunt.config('assemble.pages.options.production', true);
     grunt.task.run([
       'clean',
+      'useminPrepare',
       'assemble',
       'sass_directory_import',
+      'sass',
+      'autoprefixer',
       'concat',
       'uglify',
-      'cssmin'
+      'cssmin',
+      'filerev',
+      'usemin'
     ]);
   });
 
