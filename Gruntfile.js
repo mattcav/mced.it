@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         src: ['<%= config.src %>/styles/{base,modules,layout,objects}/_all.sass']
       }
     },
+
     sass: {
       dist: {
         options: {
@@ -71,15 +72,12 @@ module.exports = function(grunt) {
     },
 
     filerev: {
-      options: {
-        algorithm: 'md5',
-        length: 8
-      },
-      assets: {
-        src: '<%= config.dist %>/assets/**/*.{css,js}'
-      },
-      images: {
-        src: '<%= config.dist %>/assets/**/*.{jpg,jpeg,gif,png,webp,svg}'
+      dist: {
+        src: [
+          '<%= config.dist %>/assets/js/{,*/}*.js',
+          '<%= config.dist %>/assets/css/{,*/}*.css',
+          '<%= config.dist %>/assets/images/*.{jpg,jpeg,gif,png,webp,svg}'
+        ]
       }
     },
 
@@ -105,6 +103,17 @@ module.exports = function(grunt) {
       options: {
         assetsDirs: ['<%= config.dist %>','./assets/images']
       }
+    },
+
+    copy: {
+      images: {
+        expand: true,
+        cwd: '<%= config.dist %>/',
+        src: 'tmp/*',
+        dest: '<%= config.dist %>/assets/images/',
+        flatten: true,
+        filter: 'isFile',
+      },
     },
 
 
@@ -171,7 +180,17 @@ module.exports = function(grunt) {
 
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml,css,js}']
+    clean: {
+      generated: {
+        src: ['<%= config.dist %>/**/*.{html,xml,css,js}']
+      },
+      images: {
+        src: ['<%= config.dist %>/assets/images/*.{jpg,jpeg,gif,png,webp,svg}']
+      },
+      tmp: {
+        src: ['<%= config.dist %>/tmp/*']
+      },
+    }
 
   });
 
@@ -188,10 +207,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass-directory-import');
   grunt.loadNpmTasks('grunt-filerev');
   grunt.loadNpmTasks('grunt-usemin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
 
   grunt.registerTask('serve', [
-    'clean',
+    'clean:generated',
     'assemble',
     'sass_directory_import',
     'connect:livereload',
@@ -201,7 +221,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', function(){
     grunt.config('assemble.pages.options.production', true);
     grunt.task.run([
-      'clean',
+      'clean:generated',
       'useminPrepare',
       'assemble',
       'sass_directory_import',
