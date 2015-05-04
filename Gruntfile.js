@@ -166,6 +166,7 @@ module.exports = function(grunt) {
       'assemble',
       'sass_directory_import',
       'sass',
+      'autoprefixer',
       'cssmin',
       'concat',
       'uglify'
