@@ -108,7 +108,8 @@ module.exports = function(grunt) {
       dist: {
         options: {
           removeComments: true,
-          collapseWhitespace: true
+          collapseWhitespace: true,
+          minifyJS: true
         },
         files: [{
           expand: true,
@@ -123,7 +124,12 @@ module.exports = function(grunt) {
       dist: {
         options: {
           optimizationLevel: 3,
-          svgoPlugins: [{ removeViewBox: false }]
+          svgoPlugins: [{
+            removeViewBox: false,
+            removeEmptyAttrs: true,
+            cleanupIDs: true,
+            removeDoctype: true
+            }]
         },
         files: [{
           expand: true,
