@@ -75,8 +75,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
           '<%= config.dist %>/assets/js/{,*/}*.js',
-          '<%= config.dist %>/assets/css/{,*/}*.css',
-          '<%= config.dist %>/assets/images/*.{jpg,jpeg,gif,png,webp,svg}'
+          '<%= config.dist %>/assets/css/{,*/}*.css'
         ]
       }
     },
@@ -214,6 +213,9 @@ module.exports = function(grunt) {
     'clean:generated',
     'assemble',
     'sass_directory_import',
+    'sass',
+    'autoprefixer',
+    'concat',
     'connect:livereload',
     'watch'
   ]);
