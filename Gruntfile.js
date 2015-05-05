@@ -98,7 +98,7 @@ module.exports = function(grunt) {
     },
 
     usemin: {
-      html: ['<%= config.dist %>/{,*/}*.html'],
+      html: ['<%= config.dist %>/**/*.html'],
       css: ['<%= config.dist %>/assets/css/{,*/}*.css'],
       options: {
         assetsDirs: ['<%= config.dist %>','./assets/images']
@@ -165,7 +165,7 @@ module.exports = function(grunt) {
         options: {
           flatten: true,
           production: false,
-          assets: '<%= config.src %>/assets',
+          assets: './assets',
           layout: '<%= config.src %>/templates/layouts/default.hbs',
           data: '<%= config.src %>/data/*.{json,yml}',
           partials: '<%= config.src %>/templates/partials/*.hbs'
