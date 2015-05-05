@@ -119,6 +119,21 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      dist: {
+        options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{ removeViewBox: false }]
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>/assets/images/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: '<%= config.dist %>/assets/images/'
+        }]
+      }
+    },
+
     copy: {
       images: {
         expand: true,
@@ -223,7 +238,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-newer');
 
   grunt.registerTask('serve', [
     'clean:generated',
@@ -249,6 +265,7 @@ module.exports = function(grunt) {
       'uglify',
       'cssmin',
       'htmlmin',
+      'newer:imagemin',
       'filerev',
       'usemin'
     ]);
