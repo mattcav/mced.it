@@ -140,18 +140,6 @@ module.exports = function(grunt) {
       }
     },
 
-    copy: {
-      images: {
-        expand: true,
-        cwd: '<%= config.dist %>/',
-        src: 'tmp/*',
-        dest: '<%= config.dist %>/assets/images/',
-        flatten: true,
-        filter: 'isFile',
-      },
-    },
-
-
     watch: {
       assemble: {
         files: ['<%= config.src %>/{content,data,templates}/{layouts,pages,partials}/{,*/}*.{md,hbs,yml}'],
@@ -242,7 +230,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass-directory-import');
   grunt.loadNpmTasks('grunt-filerev');
   grunt.loadNpmTasks('grunt-usemin');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-newer');
