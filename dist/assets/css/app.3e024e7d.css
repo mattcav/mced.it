@@ -1061,6 +1061,7 @@ h4, .as-h4, .m-categories__title {
   margin: 4rem auto;
   text-align: center; }
   .l-speaker-teaser__title {
+    padding: 0 1rem;
     font-family: "lust-script-display", georgia, serif;
     font-style: italic;
     padding: 0 1rem; }
@@ -1102,10 +1103,10 @@ h4, .as-h4, .m-categories__title {
   vertical-align: middle; }
 
 .o-button, .m-teaser__button {
-  padding: 0.5rem 1rem;
   display: inline-block;
   text-align: center;
   line-height: 1.2;
+  padding: 0.5em 1em;
   border-radius: 2px;
   background: #222222;
   color: #FFF;
@@ -1292,6 +1293,7 @@ h4, .as-h4, .m-categories__title {
   max-width: 15rem;
   text-align: center; }
   .m-speaker__img {
+    width: 100%;
     max-width: 10rem;
     width: 100%;
     margin: 0 auto;

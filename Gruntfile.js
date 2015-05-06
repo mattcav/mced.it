@@ -38,7 +38,6 @@ module.exports = function(grunt) {
       }
     },
 
-
     autoprefixer: {
       single_file: {
         options: {
@@ -55,12 +54,6 @@ module.exports = function(grunt) {
           '<%= config.src %>/js/app.js'
         ],
         dest: '<%= config.dist %>/assets/js/app.js'
-      },
-      head: {
-        src: [
-          '<%= config.src %>/js/modernizr.js'
-        ],
-        dest: '<%= config.dist %>/assets/js/head.js'
       }
     },
 
@@ -109,7 +102,8 @@ module.exports = function(grunt) {
         options: {
           removeComments: true,
           collapseWhitespace: true,
-          minifyJS: true
+          minifyJS: true,
+          minifyCSS: true
         },
         files: [{
           expand: true,
@@ -139,18 +133,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-
-    copy: {
-      images: {
-        expand: true,
-        cwd: '<%= config.dist %>/',
-        src: 'tmp/*',
-        dest: '<%= config.dist %>/assets/images/',
-        flatten: true,
-        filter: 'isFile',
-      },
-    },
-
 
     watch: {
       assemble: {
@@ -225,6 +207,21 @@ module.exports = function(grunt) {
       tmp: {
         src: ['<%= config.dist %>/tmp/*']
       },
+    },
+
+    critical: {
+      test: {
+          options: {
+              base: '<%= config.dist %>/',
+              css: [
+                '<%= config.dist %>/assets/css/app.css'
+              ],
+              width: 1200,
+              height: 600
+          },
+          src: '<%= config.dist %>/index.html',
+          dest: '<%= config.dist %>/index.html'
+      }
     }
 
   });
@@ -242,10 +239,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass-directory-import');
   grunt.loadNpmTasks('grunt-filerev');
   grunt.loadNpmTasks('grunt-usemin');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-critical');
 
   grunt.registerTask('serve', [
     'clean:generated',
@@ -270,8 +267,9 @@ module.exports = function(grunt) {
       'concat',
       'uglify',
       'cssmin',
+      'critical',
       'htmlmin',
-      'newer:imagemin',
+      'imagemin',
       'filerev',
       'usemin'
     ]);

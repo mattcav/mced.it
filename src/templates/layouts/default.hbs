@@ -11,8 +11,9 @@
     {{else}}
       <link rel="stylesheet" href="{{assets}}/css/app.css">
     {{/if}}
-    <script src="//use.typekit.net/cqe8mew.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+    
+    {{!-- Typekit async --}}
+    <script type="text/javascript" src="//use.typekit.net/cqe8mew.js" onload="try{Typekit.load();}catch(e){}" async></script>
 
     {{> _metatags}}
 
