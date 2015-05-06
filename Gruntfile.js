@@ -38,7 +38,6 @@ module.exports = function(grunt) {
       }
     },
 
-
     autoprefixer: {
       single_file: {
         options: {
@@ -109,7 +108,8 @@ module.exports = function(grunt) {
         options: {
           removeComments: true,
           collapseWhitespace: true,
-          minifyJS: true
+          minifyJS: true,
+          minifyCSS: true
         },
         files: [{
           expand: true,
@@ -213,6 +213,21 @@ module.exports = function(grunt) {
       tmp: {
         src: ['<%= config.dist %>/tmp/*']
       },
+    },
+
+    critical: {
+      test: {
+          options: {
+              base: '<%= config.dist %>/',
+              css: [
+                '<%= config.dist %>/assets/css/app.css'
+              ],
+              width: 1200,
+              height: 600
+          },
+          src: '<%= config.dist %>/index.html',
+          dest: '<%= config.dist %>/index.html'
+      }
     }
 
   });
@@ -233,6 +248,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-critical');
 
   grunt.registerTask('serve', [
     'clean:generated',
@@ -257,8 +273,9 @@ module.exports = function(grunt) {
       'concat',
       'uglify',
       'cssmin',
+      'critical',
       'htmlmin',
-      'newer:imagemin',
+      'imagemin',
       'filerev',
       'usemin'
     ]);
