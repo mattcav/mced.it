@@ -6,12 +6,15 @@
 
   &__img
     max-width: 10rem
+    width: 100%
     margin: 0 auto
     border-radius: 50%
 
-
   &__name
-    @extend .as-h3
+    +h4
+    margin-bottom: 0
+    +respond-min($bp__tablet-portrait)
+      +h3
 
   &__twitter
     background-image: none

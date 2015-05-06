@@ -6,6 +6,13 @@
     @extend .as-h3
     font-family: $fonts--comp
     font-style: italic
+    padding: 0 1rem
+
+  &__list
+    margin: 0 auto
+    max-width: $medium-col
+    +respond-min($bp__tablet-landscape)
+      max-width: 100%
 
   &__smallprint
     font-size: em($ratio__medium)
@@ -15,8 +22,11 @@
   &__item
     display: inline-block
     vertical-align: top
-    min-width: 15rem
+    width: 100%
     padding: 0 1rem
+    +respond-min($bp__phone)
+      width: 49%
+      max-width: 18rem
     +respond-min($bp__desktop)
       padding: 0 2rem
 

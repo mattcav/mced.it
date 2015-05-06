@@ -765,13 +765,6 @@ abbr[title] {
 .script {
   font-family: "lust-script-display", georgia, serif; }
 
-h1, .as-h1 {
-  font-size: 7.75rem;
-  font-weight: 900;
-  line-height: 1.048387095rem;
-  margin-bottom: 0.209677419rem;
-  margin-top: 0.419354838rem; }
-
 h2, .as-h2 {
   font-size: 2.75rem;
   font-weight: 700;
@@ -779,7 +772,7 @@ h2, .as-h2 {
   margin-bottom: 0.590909091rem;
   margin-top: 1.181818182rem; }
 
-h3, .as-h3, .l-boxes__title, .l-speaker-teaser__title, .m-banner__title, .m-speaker__name, .m-tickets__title {
+h3, .as-h3, .l-boxes__title, .l-speaker-teaser__title, .m-banner__title, .m-tickets__title {
   font-size: 1.6875rem;
   line-height: 1.925925926rem;
   margin-bottom: 0.962962963rem;
@@ -1069,7 +1062,14 @@ h4, .as-h4, .m-categories__title {
   text-align: center; }
   .l-speaker-teaser__title {
     font-family: "lust-script-display", georgia, serif;
-    font-style: italic; }
+    font-style: italic;
+    padding: 0 1rem; }
+  .l-speaker-teaser__list {
+    margin: 0 auto;
+    max-width: 32rem; }
+    @media (min-width: 62.5em) {
+      .l-speaker-teaser__list {
+        max-width: 100%; } }
   .l-speaker-teaser__smallprint {
     font-size: 1.125em;
     font-weight: 700;
@@ -1077,8 +1077,12 @@ h4, .as-h4, .m-categories__title {
   .l-speaker-teaser__item {
     display: inline-block;
     vertical-align: top;
-    min-width: 15rem;
+    width: 100%;
     padding: 0 1rem; }
+    @media (min-width: 20em) {
+      .l-speaker-teaser__item {
+        width: 49%;
+        max-width: 18rem; } }
     @media (min-width: 80em) {
       .l-speaker-teaser__item {
         padding: 0 2rem; } }
@@ -1098,11 +1102,10 @@ h4, .as-h4, .m-categories__title {
   vertical-align: middle; }
 
 .o-button, .m-teaser__button {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0.5rem 1rem;
   display: inline-block;
   text-align: center;
-  line-height: 2.5em;
+  line-height: 1.2;
   border-radius: 2px;
   background: #222222;
   color: #FFF;
@@ -1290,8 +1293,22 @@ h4, .as-h4, .m-categories__title {
   text-align: center; }
   .m-speaker__img {
     max-width: 10rem;
+    width: 100%;
     margin: 0 auto;
     border-radius: 50%; }
+  .m-speaker__name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+    margin-bottom: 1.625rem;
+    margin-top: 1.625rem;
+    margin-bottom: 0; }
+    @media (min-width: 43.75em) {
+      .m-speaker__name {
+        font-size: 1.6875rem;
+        line-height: 1.925925926rem;
+        margin-bottom: 0.962962963rem;
+        margin-top: 0.962962963rem; } }
   .m-speaker__twitter {
     background-image: none;
     font-style: italic; }
