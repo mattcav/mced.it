@@ -1,29 +1,4 @@
-// Layouts
-//
-// Prefixed with `l-` and usually consist of objects that contain only layout information.
-//
-// Styleguide 3
-
-// Block
-//
-// The common vertically stacked block unit. It contains information about the horizontal width, vertical padding and background color of the unit.
-//
-// Markup: <div style="overflow: auto;"><div style="border:2px dashed #faf8d1; width: 1600px;">
-//   <!-- Used markup: -->
-//   <div class="l-block {$modifiers}">
-//     <div class="l-block__container" style="border: 1px dashed #9e9f9e; line-height: 3em; font-size: 14px;">Content block starts here.</div>
-//   </div>
-// </div></div>
-//
-// .l-block--wide         - Maximum width at 1280px in big screens.
-// .l-block--full-width   - Full width, no max-width.
-// .l-block--short        - Smaller vertical padding.
-// .l-block--short-bottom - Smaller vertical padding on bottom only.
-// .l-block--black        - Black background color, white color text.
-// .l-block--grey-dark    - Grey dark background color, white color text.
-//
-// Styleguide 3.1
-.l-block
+=l-block
   @extend .clearfix
   padding-left: $section-padding
   padding-right: $section-padding
@@ -34,6 +9,9 @@
     padding-left: $section-padding * 1.5
     padding-right: $section-padding * 1.5
 
+.l-block 
+  +l-block
+  
 .l-block--wider
   padding-left: $section-padding * 1.25
   padding-right: $section-padding * 1.25
@@ -44,12 +22,14 @@
     padding-left: $section-padding * 2.5
     padding-right: $section-padding * 2.5
 
-.l-block--container
-  @extend .clearfix
+=l-block--container
   margin: 0 auto
   width: 100%
   max-width: $row-width
   +respond-min($bp__widescreen)
     max-width: 72rem
+.l-block--container
+  @extend .clearfix
+  +l-block--container
 
 
