@@ -1,0 +1,40 @@
+<section class="l-sponsors">
+  <h2 class="l-sponsors__title">
+    {{site.sponsor_title}}
+  </h2>
+
+  {{!-- large sponsors --}}
+  <div class="l-sponsors__section">
+    {{#withSort sponsors.list "order"}}
+      {{#is weight "large"}}
+        <div class="l-sponsors__slot l-sponsors__slot--primary">
+          {{> _sponsor}}
+        </div>
+      {{/is}}
+    {{/withSort}}
+  </div>
+
+  {{!-- medium sponsors --}}
+  <div class="l-sponsors__section">
+    {{#withSort sponsors.list "order"}}
+      {{#is weight "medium"}}
+        <div class="l-sponsors__slot l-sponsors__slot--primary">
+          {{> _sponsor}}
+        </div>
+      {{/is}}
+    {{/withSort}}
+  </div>
+
+  {{!-- small sponsors --}}
+  <div class="l-sponsors__section">
+    {{#withSort sponsors.list "order"}}
+      {{#is weight "small"}}
+        <div class="l-sponsors__slot l-sponsors__slot--primary">
+          {{> _sponsor}}
+        </div>
+      {{/is}}
+    {{/withSort}}
+  </div>
+
+
+</section>
