@@ -7,7 +7,7 @@
   <div class="l-sponsors__section">
     {{#withSort sponsors.list "order"}}
       {{#is weight "large"}}
-        <div class="l-sponsors__slot l-sponsors__slot--primary">
+        <div class="l-sponsors__slot l-sponsors__slot--{{weight}}">
           {{> _sponsor}}
         </div>
       {{/is}}
@@ -18,7 +18,7 @@
   <div class="l-sponsors__section">
     {{#withSort sponsors.list "order"}}
       {{#is weight "medium"}}
-        <div class="l-sponsors__slot l-sponsors__slot--primary">
+        <div class="l-sponsors__slot l-sponsors__slot--{{weight}}">
           {{> _sponsor}}
         </div>
       {{/is}}
@@ -29,7 +29,7 @@
   <div class="l-sponsors__section">
     {{#withSort sponsors.list "order"}}
       {{#is weight "small"}}
-        <div class="l-sponsors__slot l-sponsors__slot--primary">
+        <div class="l-sponsors__slot l-sponsors__slot--{{weight}}">
           {{> _sponsor}}
         </div>
       {{/is}}
