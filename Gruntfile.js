@@ -54,12 +54,6 @@ module.exports = function(grunt) {
           '<%= config.src %>/js/app.js'
         ],
         dest: '<%= config.dist %>/assets/js/app.js'
-      },
-      head: {
-        src: [
-          '<%= config.src %>/js/modernizr.js'
-        ],
-        dest: '<%= config.dist %>/assets/js/head.js'
       }
     },
 
