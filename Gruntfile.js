@@ -93,7 +93,12 @@ module.exports = function(grunt) {
       html: ['<%= config.dist %>/**/*.html'],
       css: ['<%= config.dist %>/assets/css/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= config.dist %>','./assets/images']
+        assetsDirs: ['<%= config.dist %>','./assets/images'],
+        patterns: {
+          html: [
+            [/(assets\/.*?\.(?:gif|jpeg|jpg|png|webp|svg|css))/gm, 'Replacing revved also in inline stuff']
+          ]
+        }
       }
     },
 
@@ -267,7 +272,7 @@ module.exports = function(grunt) {
       'concat',
       'uglify',
       'cssmin',
-//      'critical',
+      'critical',
       'htmlmin',
       'imagemin',
       'filerev',
