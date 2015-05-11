@@ -6,8 +6,6 @@
     +respond-min($bp__tablet-landscape)
       width: 100%
 
-  @extend .margin-top-double
-
   &__inner
     @extend .padding-double
     color: $color__black
@@ -49,7 +47,8 @@
         position: calc(100% - 1rem) calc(100% - 1rem)
 
     iframe
-      @extend .l-block
       +ticket-col
       max-width: $regular-col
+      +respond-min($bp__tablet-portrait)
+        +l-block
 
