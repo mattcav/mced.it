@@ -1,39 +1,40 @@
 // base color defs
-$color-primary: #9dcef7; //blue
-$color-secondary: #c43c31; //red
-$color-shade-amount: 15%;
-$color-trans-amount: 0.5;
+$color__text: #222;
+$color__primary: #9dcef7; //blue
+$color__secondary: #c43c31; //red
+$color__shade-amount: 15%;
+$color__trans-amount: 0.5;
 // color variable map
 $colors: (
   primary: (
-    base: $color-primary,
-    light: lighten($color-primary, $color-shade-amount),
-    dark: darken($color-primary, $color-shade-amount),
-    trans: transparentize($color-primary, $color-trans-amount)
+    base: $color__primary,
+    light: lighten($color__primary, $color__shade-amount),
+    dark: darken($color__primary, $color__shade-amount),
+    trans: transparentize($color__primary, $color__trans-amount)
   ),
   secondary: (
-    base: $color-secondary,
-    light: lighten($color-secondary, $color-shade-amount),
-    dark: darken($color-secondary, $color-shade-amount),
-    trans: transparentize($color-secondary, $color-trans-amount)
+    base: $color__secondary,
+    light: lighten($color__secondary, $color__shade-amount),
+    dark: darken($color__secondary, $color__shade-amount),
+    trans: transparentize($color__secondary, $color__trans-amount)
   )
 );
 
-@function color($color-name, $color-variant:nil) {
+@function color($color__name, $color__variant:nil) {
   // color variant is optional
-  @if ($color-variant != nil) {
+  @if ($color__variant != nil) {
     // map inception
-    @return map-get(map-get($colors, $color-name), $color-variant);
+    @return map-get(map-get($colors, $color__name), $color__variant);
   } @else {
-    @return map-get($colors, $color-name);
+    @return map-get($colors, $color__name);
   }
 }
 
 // usage
 
-h1 {
-  color: color(primary, base);
-}
+// h1 {
+//   color: color(primary, base);
+// }
 // strong
 //  color: color(light,secondary)
 // a
