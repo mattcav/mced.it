@@ -1,22 +1,3 @@
-@function em($px, $base: 16)
-  @return ($px / $base) + em
-
-@function rem($px, $base: 16)
-  @return ($px / $base) + rem
-
-=font-size($font-size, $line-height: true, $rem: false)
-  @if $rem == true
-    font-size: rem($font-size)
-    .no-cssremunit &
-      font-size: $font-size + px
-  @else
-    font-size: em($font-size)
-
-  @if $line-height == true
-    line-height: ceil($font-size / $unit--baseline) * ($unit--baseline / $font-size) + em
-  @else
-    line-height: em($line-height, $font-size)
-
 =bold
   font-weight: $fonts__bold-weight
 
@@ -25,10 +6,21 @@
   &:visited
     @content
 
-=on-interaction
-  &:hover,
-  &:active,
-  &:focus
+=on-event($self: false)
+  @if $self
+    &,
+    &:hover,
+    &:active,
+    &:focus
+      @content
+  @else
+    &:hover,
+    &:active,
+    &:focus
+      @content
+
+=when-inside($context)
+  #{$context} &
     @content
 
 =visuallyhidden
@@ -63,28 +55,6 @@
   &:-ms-input-placeholder
     @content
 
-=pseudo-center
-  &:after
-    content: ""
-    display: inline-block
-    height: 100%
-    vertical-align: middle
-    margin-left: -.25em
-
-=unset-media($switch: false)
-  .media__aside
-    float: none
-    margin-bottom: $gutter-media
-    @if $switch
-      margin-left: 0
-    @else
-      margin-right: 0
-
-=unset-grid
-  .grid__unit
-    float: none
-    width: 100%
-
 =unset-list
   margin-left: 0
   margin-bottom: 0
@@ -92,73 +62,23 @@
   li
     margin-bottom: 0
 
-=rb-clearfix
+=clearfix
   &:after
     content: ""
     display: table
     clear: both
-
-=rb-fade-left
-  &:before
-    content: ""
-    display: block
-    position: absolute
-    z-index: 40
-    top: 0
-    left: 0
-    width: 15%
-    height: 100%
-    background: linear-gradient(to right, $color__black, rgba($color__black, 0))
-    pointer-events: none
-    transition: opacity $transition__duration
-
-=rb-fade-right
-  &:after
-    content: ""
-    display: block
-    position: absolute
-    z-index: 40
-    top: 0
-    right: 0
-    width: 15%
-    height: 100%
-    background: linear-gradient(to left, $color__black, rgba($color__black, 0))
-    pointer-events: none
-    transition: opacity $transition__duration
-
-=pseudo($absolute: false, $where: before, $xpos: top, $xposVal: 0, $ypos: left, $yposVal: 0, $margin-top: auto)
-  @if $absolute
-    position: relative
-  &:#{$where}
-    content: ""
-    display: block
-    @if $absolute
-      position: absolute
-      #{$xpos}: $xposVal
-      #{$ypos}: $yposVal
-      @if $margin-top != auto
-        margin-top: $margin-top
-
-=set-border($where: top, $width: 1px, $color: $color__border, $style: solid)
-  @if $where == all
-    border: $width $style $color
-  @else
-    border-#{$where}: $width $style $color__border
 
 =link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false)
   color: $normal
   @if $visited
     &:visited
       color: $visited
-
   @if $focus
     &:focus
       color: $focus
-
   @if $hover
     &:hover
       color: $hover
-
   @if $active
     &:active
       color: $active;

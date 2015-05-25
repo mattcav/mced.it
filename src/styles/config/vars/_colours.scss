@@ -1,0 +1,40 @@
+// base color defs
+$color-primary: #9dcef7; //blue
+$color-secondary: #c43c31; //red
+$color-shade-amount: 15%;
+$color-trans-amount: 0.5;
+// color variable map
+$colors: (
+  primary: (
+    base: $color-primary,
+    light: lighten($color-primary, $color-shade-amount),
+    dark: darken($color-primary, $color-shade-amount),
+    trans: transparentize($color-primary, $color-trans-amount)
+  ),
+  secondary: (
+    base: $color-secondary,
+    light: lighten($color-secondary, $color-shade-amount),
+    dark: darken($color-secondary, $color-shade-amount),
+    trans: transparentize($color-secondary, $color-trans-amount)
+  )
+);
+
+@function color($color-name, $color-variant:nil) {
+  // color variant is optional
+  @if ($color-variant != nil) {
+    // map inception
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  } @else {
+    @return map-get($colors, $color-name);
+  }
+}
+
+// usage
+
+h1 {
+  color: color(primary, base);
+}
+// strong
+//  color: color(light,secondary)
+// a
+//  color: color(light,secondary)

@@ -1,8 +1,13 @@
-<header class="m-banner">
-  <p class="m-banner__intro">
-    a new wonderful adventure
-  </p>
+<article class="m-banner">
   <h1 class="m-banner__title">
-    {{> _title}}
+    <img
+      sizes="(min-width: 640px) 33.3vw, 100vw"
+      srcset="
+      ./assets/images/mced.png 375w,
+      ./assets/images/mced-m.png 500w,
+      ./assets/images/mced-l.png 800w"
+      alt="{{site.heading}}"
+      class="m-banner__img"
+      >
   </h1>
-</header>
+</article>

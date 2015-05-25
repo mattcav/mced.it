@@ -1,5 +1,8 @@
-*
+html
   box-sizing: border-box
+
+*, *::before, *::after
+  box-sizing: inherit
 
 html,
 .no-js body
@@ -19,6 +22,7 @@ p
 img, audio, canvas, embed, object, video
   display: block
   max-width: 100%
+  height: auto
 
 img
   iframe[src*="maps.google"] &
@@ -30,12 +34,12 @@ iframe
 
 blockquote
   font-style: italic
-  color: $color__grey3
+  color: #ddd
 
 address
   display: block
   font-style: normal
-  margin-bottom: em($ratio__medium)
+  margin-bottom: $rithm
   white-space: pre-line
 
 ins
@@ -57,10 +61,10 @@ hr,
 .hr
   clear: both
   border: none
-  +set-border(top)
-  margin-top: em($ratio__medium)
-  margin-bottom: em($ratio__medium)
+  border-top: 1px solid black
+  margin-top: $rithm
+  margin-bottom: $rithm
 
 ::selection
-  color: $color__white
-  background-color: $color__primary
+  color: white
+  background-color: black

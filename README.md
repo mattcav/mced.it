@@ -1,6 +1,6 @@
-# FTF2015 page
+# mced.it page
 
-This is FTF2015 source files. 
+This is MCED.it source files. 
 Author: Matteo Cavucci (mced.it)
 
 Based on: 
@@ -14,14 +14,3 @@ to work:
 
 to build:
 - $ grunt build 
-
-
-## Testi
-
-Nella cartella src/data ci sono tutti i riferimenti per i testi del sito.
-Il file site.yml contiene titoli e micro-copy.
-I file nome-cognome.json sono relativi ai dati di ciascuno speaker.
-
-
-# Sponsors
-Nel file src/data/sponsors.json ci sono i contenuti per la sezione sponsor. "Order" è l'ordine in cui viene posizionato lo sponsor; "Weight" determina in quale livello di sponsor verrà incluso.
